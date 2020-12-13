@@ -21,21 +21,19 @@
 // @SAUCE: https://p5js.org/examples/sound-sound-effect.html
 
 
-
-const STATE_HOME      = 1
-const STATE_HELP      = 2
-const STATE_GAME      = 3
-const STATE_GAMEOVER  = 4
+import stylesReset from '../css/reset.css'
+import stylesApp from '../css/app.css'
+// import * as pkg from '~/package.json'
 
 
 const Game = {
-    height: 600,
-    name:   'Squares 3',
-    offset: 30,
-    state:  STATE_HOME,
-    width:  800,
+    // name:       pkg.name,
+    // version:    pkg.version,
+    offset:     30,
+    state:      null,
+    height:     600,
+    width:      800,
 }
-
 
 
 const COLOR_BLACK   = '#000000'
@@ -56,11 +54,6 @@ let SOUND_MAIN_LOOP
 let SOUND_LOFI_LOOP
 
 let STATE_PLAYING_LOFI = true
-
-
-let PlayButton
-
-
 
 
 class Shape {
@@ -148,10 +141,11 @@ class Scene {
 }
 
 
+
 let SceneHomeScreen = new Scene('homescreen')
 
 
-SceneHomeScreen.setup = () => {
+SceneHomeScreen.setup = function() {
     this.shapes = new Array(20).fill({}).map(el => new Shape())
     console.debug('homescreen shapes', this.shapes)
 
@@ -167,7 +161,7 @@ SceneHomeScreen.setup = () => {
 }
 
 
-SceneHomeScreen.draw = () => {
+SceneHomeScreen.draw = function() {
     fill(0,0,0)
     noStroke()
     text(Game.name, Game.width / 2, Game.height / 2)
@@ -176,24 +170,15 @@ SceneHomeScreen.draw = () => {
 }
 
 
-
-
 let SceneHelpScreen  = new Scene('help')
 let SceneGameScreen = new Scene('game')
 let SceneGameOverScreen = new Scene('gameover')
 
 
 
-
-
-
-
-
-
 // =============================================
 //  P5 Runtime Methods
 // =============================================
-
 
 function preload() {
     SOUND_MAIN_LOOP = loadSound('audio/main-loop.mp3')
@@ -209,10 +194,10 @@ function setup() {
     SOUND_MAIN_LOOP.loop() // song is ready to play during setup() because it was loaded during preload
     SOUND_LOFI_LOOP.loop() // song is ready to play during setup() because it was loaded during preload
 
+    transitionScene(SceneHomeScreen)
+    // Game.state = SceneHomeScreen
 
-    Game.state = SceneHomeScreen
-
-    Game.state.setup()
+    // Game.state.setup()
 
     background(COLOR_WHITE)
 }
@@ -223,7 +208,6 @@ function windowResized() {
 }
 
 
-
 function draw() {
 
     Game.state.draw()
@@ -231,15 +215,11 @@ function draw() {
 }
 
 
-
-
 function mousePressed() {
 
     Game.state.mousePressed()
 
 }
-
-
 
 
 function toggleAudioTracks(bool) {
@@ -261,39 +241,13 @@ function transitionScene(gameState) {
 
     console.debug('transitionScene', gameState)
 
-
 }
-
-
-
-
-// function mousePressed() {
-
-//  STATE_PLAYING_LOFI = !STATE_PLAYING_LOFI
-
-//  if (STATE_PLAYING_LOFI) {
-//      SOUND_MAIN_LOOP.setVolume(0)
-//      SOUND_LOFI_LOOP.setVolume(1)
-//      background(255, 0, 0)
-
-//  } else {
-//      SOUND_MAIN_LOOP.setVolume(1)
-//      SOUND_LOFI_LOOP.setVolume(0)
-//      background(0, 255, 0)
-//  }
-// }
-
-
-
-
-
 
 
 
 // ========================================
 //  SCENE METHODS
 // ========================================
-
 
 
 
@@ -305,7 +259,6 @@ function transitionScene(gameState) {
 function randomInt(range = 1) {
     return Math.floor(Math.random() * range)
 }
-
 
 
 function outside(i, r1, r2) {
