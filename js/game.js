@@ -21,20 +21,22 @@
 // @SAUCE: https://p5js.org/examples/sound-sound-effect.html
 
 
-
-const STATE_HOME      = 1
-const STATE_HELP      = 2
-const STATE_GAME      = 3
-const STATE_GAMEOVER  = 4
-
-
 const Game = {
     height: 600,
-    name:   'Squares 3',
+    name:   'squares 3',
+    byline: 'by Brandtley McMinn',
     offset: 30,
-    state:  STATE_HOME,
+    state:  null,
     width:  800,
 }
+
+
+
+const SCENE_HOME      = 0
+const SCENE_HELP      = 1
+const SCENE_GAME      = 2
+const SCENE_GAMEOVER  = 3
+
 
 
 
@@ -128,65 +130,126 @@ class Shape {
 
 
 
-class Scene {
-    name = ''
-
-    constructor(name) {
-        this.name = name
-    }
-
-    setup() {}
-
-    destroy() {}
-
-    draw() {}
-
-    mousePressed() {}
-
-    keyDown() {}
-
+function Scene() {
+    this.name = ''
+    this.setup = function() {}
+    this.destroy = function() {}
+    this.draw = function() {}
+    this.mousePressed = function() {}
+    this.keyDown = function() {}
+    this.keyPressed = function() {}
 }
 
+// class HomeScene extends Scene {
 
-let SceneHomeScreen = new Scene('homescreen')
+//     shapes = []
+//     title
+//     subtitle
+//     helpButton
+//     playButton
+
+//     setup() {
+
+//         console.debug('setup', this.name)
+
+//         this.shapes = new Array(20).fill({}).map(el => new Shape())
+
+//         this.title = createElement('h1', Game.name)
+//         this.title.position(Game.width / 2 - 200, Game.height / 2 - 200)
+
+//         this.subtitle = createElement('p', Game.byline)
+//         this.subtitle.position(this.title.x + 80, this.title.y + 80)
+
+//         this.playButton = createButton('play')
+//         this.playButton.position(Game.width / 2, Game.height / 3 * 2)
+//         this.playButton.mousePressed(transitionScene.bind(this, SCENE_GAME))
+
+//         this.helpButton = createButton('help')
+//         this.helpButton.position(Game.width / 2, this.playButton.y + this.playButton.height + 5)
+//         this.helpButton.mousePressed(transitionScene.bind(this, SCENE_HELP))
+
+//         toggleAudioTracks(true)
+//     }
 
 
-SceneHomeScreen.setup = () => {
+
+//     draw() {
+
+//         console.debug('draw', this.shapes)
+
+//         for (var i = this.shapes.length - 1; i >= 0; i--) {
+//             this.shapes[i].update()
+//             this.shapes[i].draw()
+//         }
+
+//     }
+
+// }
+
+
+// let SceneHomeScreen = new HomeScene()
+
+let SceneHomeScreen = new Scene()
+
+SceneHomeScreen.prototype.shapes        = []
+SceneHomeScreen.prototype.title         = null
+SceneHomeScreen.prototype.subtitle      = null
+SceneHomeScreen.prototype.helpButton    = null
+SceneHomeScreen.prototype.playButton    = null
+
+SceneHomeScreen.prototype.setup = function() {
+
     this.shapes = new Array(20).fill({}).map(el => new Shape())
-    console.debug('homescreen shapes', this.shapes)
+
+    this.title = createElement('h1', Game.name)
+    this.title.position(Game.width / 2 - 200, Game.height / 2 - 200)
+
+    this.subtitle = createElement('p', Game.byline)
+    this.subtitle.position(this.title.x + 80, this.title.y + 80)
 
     this.playButton = createButton('play')
     this.playButton.position(Game.width / 2, Game.height / 3 * 2)
-    this.playButton.mousePressed(transitionScene.bind(this, STATE_GAME))
+    this.playButton.mousePressed(transitionScene.bind(this, SCENE_GAME))
 
     this.helpButton = createButton('help')
     this.helpButton.position(Game.width / 2, this.playButton.y + this.playButton.height + 5)
-    this.helpButton.mousePressed(transitionScene.bind(this, STATE_HELP))
+    this.helpButton.mousePressed(transitionScene.bind(this, SCENE_HELP))
 
     toggleAudioTracks(true)
 }
 
 
-SceneHomeScreen.draw = () => {
-    fill(0,0,0)
-    noStroke()
-    text(Game.name, Game.width / 2, Game.height / 2)
+SceneHomeScreen.prototype.draw = function() {
 
+    console.debug('draw', this.shapes)
+
+    for (var i = this.shapes.length - 1; i >= 0; i--) {
+        this.shapes[i].update()
+        this.shapes[i].draw()
+    }
 
 }
 
 
 
 
-let SceneHelpScreen  = new Scene('help')
-let SceneGameScreen = new Scene('game')
-let SceneGameOverScreen = new Scene('gameover')
 
 
 
 
+let SceneHelpScreen     = new Scene()// = new Scene('help')
+let SceneGameScreen     = new Scene()// = new Scene('game')
+let SceneGameOverScreen = new Scene()// = new Scene('gameover')
 
 
+
+
+const SCENES_LIST = [
+    SceneHomeScreen,
+    SceneHelpScreen,
+    SceneGameScreen,
+    SceneGameOverScreen,
+]
 
 
 
@@ -209,10 +272,7 @@ function setup() {
     SOUND_MAIN_LOOP.loop() // song is ready to play during setup() because it was loaded during preload
     SOUND_LOFI_LOOP.loop() // song is ready to play during setup() because it was loaded during preload
 
-
-    Game.state = SceneHomeScreen
-
-    Game.state.setup()
+    transitionScene(SCENE_HOME)
 
     background(COLOR_WHITE)
 }
@@ -226,7 +286,7 @@ function windowResized() {
 
 function draw() {
 
-    Game.state.draw()
+    SCENES_LIST[Game.sceneId].draw()
 
 }
 
@@ -235,7 +295,14 @@ function draw() {
 
 function mousePressed() {
 
-    Game.state.mousePressed()
+    SCENES_LIST[Game.sceneId].mousePressed()
+
+}
+
+
+function keyPressed() {
+
+    SCENES_LIST[Game.sceneId].keyPressed()
 
 }
 
@@ -257,11 +324,20 @@ function toggleAudioTracks(bool) {
 }
 
 
-function transitionScene(gameState) {
+function transitionScene(newSceneId) {
 
-    console.debug('transitionScene', gameState)
+    if (Game.sceneId && Game.sceneId === newSceneId) { return }
 
 
+    if (Game.sceneId) {
+        SCENES_LIST[Game.sceneId].destroy()
+    }
+
+    Game.sceneId = newSceneId
+
+    console.debug('SCENES_LIST[Game.sceneId]', SCENES_LIST[Game.sceneId])
+
+    SCENES_LIST[Game.sceneId].setup()
 }
 
 

@@ -4,7 +4,7 @@
   "description": "An HTML5 version of the Squares 2 flash game by Gavin Shapiro",
   "main": "index.js",
   "scripts": {
-  	"run": "php -S localhost:3005"
+  	"start": "php -S localhost:3005"
   },
   "author": "BranacleBoy <https://github.com/bmcminn>",
   "license": "MIT"
