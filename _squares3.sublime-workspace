@@ -4,557 +4,69 @@
 		"selected_items":
 		[
 			[
-				"SCEN",
-				"SCENES_LIST"
+				"toggle",
+				"toggleAudioTracks"
 			],
 			[
-				"window",
-				"windowresized"
+				"STATE",
+				"STATE_PLAYING_LOFI"
 			],
 			[
-				"res",
-				"resizeCanvas"
+				"filterString",
+				"colorsFilterString"
 			],
 			[
-				"for",
-				"forEach"
+				"udpat",
+				"updateUndo"
 			],
 			[
-				"recal",
-				"recalculateTilesize"
+				"DEBUG",
+				"DEBUG_COLOR"
 			],
 			[
-				"widnow",
-				"windowMargin"
+				"DEBU",
+				"DEBUG_COLOR"
 			],
 			[
-				"inner",
-				"innerHeight"
+				"contrast",
+				"getContrastYIQ"
 			],
 			[
-				"zoom",
-				"zoomLevel"
-			],
-			[
-				"island",
-				"ISLAND_WIDTH"
-			],
-			[
-				"tileOFf",
-				"tileOffsetY"
-			],
-			[
-				"http_build_",
-				"http_build_url"
-			],
-			[
-				"color-text",
-				"color-text-secondary"
-			],
-			[
-				"auth",
-				"authenticated"
-			],
-			[
-				"form",
-				"FormulateForm"
-			],
-			[
-				"sun",
-				"subdivision_id"
-			],
-			[
-				"getEnv",
-				"getEnvironment"
-			],
-			[
-				"build",
-				"BUILD_TASKS"
-			],
-			[
-				"recent",
-				"recentActiveStep"
-			],
-			[
-				"current",
-				"currentStep"
-			],
-			[
-				"step",
-				"stepFourSeriesPreviewModal"
+				"over",
+				"overflow-y\tproperty"
 			],
 			[
 				"show",
-				"showEstimateDisclaimer"
+				"showCenterCross"
 			],
 			[
-				"list",
-				"listRecipients"
+				"open",
+				"openDialogue"
 			],
 			[
-				"area",
-				"areaRecipients"
+				"FILL_",
+				"FILL_THRESHOLD_MESSAGE"
 			],
 			[
-				"total",
-				"total_product_cost"
+				"TOOL_",
+				"TOOL_EYEDROPPER"
 			],
 			[
-				"rec",
-				"recipientMetrics"
+				"for",
+				"for\tfor (…) {…} (Improved Native For-Loop)"
 			],
 			[
-				"_t",
-				"_publishSeriesDataUpdate"
+				"exec",
+				"ExecQuery"
 			],
 			[
-				"sel",
-				"selectedLists"
-			],
-			[
-				"Recipi",
-				"RecipientsTableService"
-			],
-			[
-				"update",
-				"updateSeriesData"
-			],
-			[
-				"Emi",
-				"MailingClickedEmitter"
-			],
-			[
-				"curernt",
-				"currentStep"
-			],
-			[
-				"curern",
-				"currentIndex"
-			],
-			[
-				"get",
-				"getCampaignLabel"
-			],
-			[
-				"address",
-				"address_color"
-			],
-			[
-				"init",
-				"initNewClientFollowupSteps"
-			],
-			[
-				"isNew",
-				"isNewClientFollowup"
-			],
-			[
-				"ProgressSte",
-				"ProgressStepModel"
-			],
-			[
-				"word-",
-				"word-break\tproperty"
-			],
-			[
-				"full",
-				"fullcardUploadTemplates"
-			],
-			[
-				"_sto",
-				"_storageGetItemData"
-			],
-			[
-				"slowMo",
-				"slowmoFrames"
-			],
-			[
-				"slow",
-				"slowmoFrames"
-			],
-			[
-				"acto",
-				"actorsList"
-			],
-			[
-				"remove",
-				"removeEventListener"
-			],
-			[
-				"isCompany",
-				"isCompanySplitExpanded"
-			],
-			[
-				"iScheduled",
-				"iScheduledCampaignId"
-			],
-			[
-				"selec",
-				"selectedSeries"
-			],
-			[
-				"map",
-				"mapUpdatedMailings"
-			],
-			[
-				"_",
-				"_debugPromoCode"
-			],
-			[
-				"func_get",
-				"func_get_args"
-			],
-			[
-				"sAFE",
-				"SafeHtmlPipe"
-			],
-			[
-				"mb_convert",
-				"mb_convert_encoding"
-			],
-			[
-				"break",
-				"breakpoints"
-			],
-			[
-				"formstat",
-				"formstatexml"
-			],
-			[
-				"array_merge",
-				"array_merge_recursive"
-			],
-			[
-				"fil",
-				"FILENAME"
-			],
-			[
-				"_label",
-				"_labelHistoricalMailings"
-			],
-			[
-				"isLaoding",
-				"isLoadingHistorical"
-			],
-			[
-				"color-bu",
-				"color-button-default"
-			],
-			[
-				"layout",
-				"layoutLabelsWidth"
-			],
-			[
-				"upcoming",
-				"upcomingMailings"
-			],
-			[
-				"historical",
-				"historicalMailings"
-			],
-			[
-				"isLodin",
-				"isLoadingUpcoming"
-			],
-			[
-				"isLoad",
-				"isLoadingHistorical"
-			],
-			[
-				"upcom",
-				"upcomingMailings"
-			],
-			[
-				"isLoading",
-				"isLoadingMailings"
-			],
-			[
-				"iSche",
-				"iScheduledCampaignId"
-			],
-			[
-				"time",
-				"TIME_DIFF"
-			],
-			[
-				"confirm",
-				"confirmButtonClass"
-			],
-			[
-				"FILTER_SANIIT",
-				"FILTER_SANITIZE_BOOLEAN"
-			],
-			[
-				"campaign",
-				"CampaignsService"
-			],
-			[
-				"_init",
-				"_initUpcomingMailings"
-			],
-			[
-				"acti",
-				"activeRoute"
-			],
-			[
-				"campagin",
-				"campaignId"
-			],
-			[
-				"Local",
-				"LocalMarketReportURL"
-			],
-			[
-				"table",
-				"tableItemsPerPage"
-			],
-			[
-				"appswit",
-				"appswitchtermenu"
-			],
-			[
-				"format",
-				"routeFormat"
-			],
-			[
-				"responses",
-				"Responses"
-			],
-			[
-				"cFOrm",
-				"cFormFirstname"
-			],
-			[
-				"isSele",
-				"isSelectable"
-			],
-			[
-				"JSON",
-				"JSON_PRETTY_PRINT"
-			],
-			[
-				"selected",
-				"selectedMailing"
-			],
-			[
-				"_qx",
-				"_qxpBackOfCardUpdates"
-			],
-			[
-				"campa",
-				"campaignId"
-			],
-			[
-				"polif",
-				"polyfillURI"
-			],
-			[
-				"poliy",
-				"polyfillURI"
-			],
-			[
-				"pol",
-				"polyfillSrc"
-			],
-			[
-				"recipei",
-				"recipientsList"
-			],
-			[
-				"JSO",
-				"JSON_PRETTY_PRINT"
-			],
-			[
-				"sleect",
-				"selectedLists"
-			],
-			[
-				"CampaignController",
-				"CampaignsController"
-			],
-			[
-				"original",
-				"originalLists"
-			],
-			[
-				"recipi",
-				"recipientsList"
-			],
-			[
-				"activeLi",
-				"activeLists"
-			],
-			[
-				"mailing",
-				"mailing_year"
-			],
-			[
-				"isOrder",
-				"isOrderSuccess"
-			],
-			[
-				"order",
-				"isOrderSuccess"
-			],
-			[
-				"isCa",
-				"isCancelled"
-			],
-			[
-				"backgorund",
-				"background-color"
-			],
-			[
-				"min",
-				"minRecipientCount"
-			],
-			[
-				"submit",
-				"submitCampaignOrder"
-			],
-			[
-				"api",
-				"_apiPost"
-			],
-			[
-				"postOrder",
-				"postOrderEstimate"
-			],
-			[
-				"malin",
-				"mailingsData"
-			],
-			[
-				"Camp",
-				"CampaignStart_Dt"
-			],
-			[
-				"mailnig",
-				"mailingTargetDate"
-			],
-			[
-				"mailng",
-				"mailingTargetDate"
-			],
-			[
-				"breacru",
-				"breadcrumb"
-			],
-			[
-				"breadc",
-				"breadcrumbLinks"
-			],
-			[
-				"isOr",
-				"isOrderSuccess"
-			],
-			[
-				"swal",
-				"nativeSwal"
-			],
-			[
-				"back",
-				"backOfCardUpdates"
-			],
-			[
-				"__init",
-				"__initAutomator"
-			],
-			[
-				"First",
-				"firstMailingYear"
-			],
-			[
-				"message",
-				"error_message"
-			],
-			[
-				"_reset",
-				"_resetList"
-			],
-			[
-				"rece",
-				"recipientLists"
-			],
-			[
-				"config",
-				"configuration"
-			],
-			[
-				"campaignDescir",
-				"campaignsDescriptionStep2"
-			],
-			[
-				"recipie",
-				"recipientLists"
-			],
-			[
-				"User",
-				"USER"
-			],
-			[
-				"firstmaili",
-				"firstMailingDate"
-			],
-			[
-				"first",
-				"firstMailingMonth"
-			],
-			[
-				"num",
-				"numRecipients"
-			],
-			[
-				"Radius",
-				"RadiusList"
-			],
-			[
-				"cat_",
-				"card_cat"
-			],
-			[
-				"validate",
-				"validatePromocode"
+				"CORS",
+				"CORSMiddleware"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "js/game.js",
-			"settings":
-			{
-				"buffer_size": 8316,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 283,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 1477,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/app.css",
-			"settings":
-			{
-				"buffer_size": 5323,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -563,56 +75,20 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 236.0,
+		"height": 0.0,
 		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"chan",
-				"ChangeQuotes"
-			],
-			[
-				"javasc",
-				"Set Syntax: JavaScript Next"
-			],
-			[
-				"warp",
-				"Word Wrap: Toggle"
-			],
-			[
-				"wrap",
-				"Word Wrap: Toggle"
-			],
-			[
-				"disable",
-				"Package Control: Disable Package"
-			],
-			[
 				"html",
 				"Set Syntax: HTML"
-			],
-			[
-				"javas",
-				"Set Syntax: JavaScript"
-			],
-			[
-				"javascript ",
-				"Set Syntax: JavaScript Next"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
 			],
 			[
 				"settings",
 				"Preferences: Settings"
 			],
 			[
-				"javascrip",
-				"Set Syntax: JavaScript"
-			],
-			[
-				"java",
+				"javas",
 				"Set Syntax: JavaScript"
 			],
 			[
@@ -620,405 +96,235 @@
 				"Pretty JSON: Format and Sort JSON"
 			],
 			[
-				"vue",
-				"Set Syntax: Vue Component"
-			],
-			[
-				"isntall",
-				"Package Control: Install Package"
-			],
-			[
-				"mark",
-				"Set Syntax: Markdown Extended"
-			],
-			[
-				"isntal",
-				"Package Control: Install Package"
-			],
-			[
-				"balde",
-				"Set Syntax: Laravel Blade"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"markdown",
-				"Set Syntax: Markdown Extended"
-			],
-			[
-				"markdo",
-				"Set Syntax: Markdown Extended"
-			],
-			[
-				"styl",
-				"Set Syntax: Stylus"
-			],
-			[
-				"twgi",
-				"Set Syntax: HTML (Twig)"
-			],
-			[
-				"twig",
-				"Set Syntax: HTML (Twig)"
-			],
-			[
-				"h",
-				"Set Syntax: HTML"
-			],
-			[
-				"markd",
-				"Set Syntax: Markdown"
-			],
-			[
-				"color",
-				"UI: Select Color Scheme"
-			],
-			[
-				"theme",
-				"UI: Select Theme"
-			],
-			[
-				"chang",
+				"chan",
 				"ChangeQuotes"
-			],
-			[
-				"javacsrip",
-				"Set Syntax: JavaScript"
-			],
-			[
-				"stylu",
-				"Set Syntax: Stylus"
-			],
-			[
-				"ch",
-				"ChangeQuotes"
-			],
-			[
-				"change",
-				"ChangeQuotes"
-			],
-			[
-				"enable",
-				"Package Control: Enable Package"
-			],
-			[
-				"type",
-				"Set Syntax: TypeScript"
-			],
-			[
-				"trailin",
-				"Trailing Spaces: Delete Trailing Spaces"
-			],
-			[
-				"trailng",
-				"Trailing Spaces: Delete Trailing Spaces"
 			],
 			[
 				"delete",
 				"Trailing Spaces: Delete Trailing Spaces"
 			],
 			[
-				"yal",
-				"Set Syntax: YAML"
-			],
-			[
-				"train",
-				"Trailing Spaces: Delete Trailing Spaces"
-			],
-			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
 				"trailing",
 				"Trailing Spaces: Delete Trailing Spaces"
 			],
 			[
-				"de",
-				"Trailing Spaces: Delete Trailing Spaces"
+				"pytho",
+				"Set Syntax: Python"
 			],
 			[
-				"beau",
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"beaut",
 				"HTMLBeautify"
-			],
-			[
-				"typesc",
-				"Set Syntax: TypeScript"
-			],
-			[
-				"ini",
-				"Set Syntax: INI"
 			],
 			[
 				"php",
 				"Set Syntax: PHP"
 			],
 			[
-				"javascr",
-				"Set Syntax: JavaScript Next"
-			],
-			[
-				"scheme",
-				"UI: Select Color Scheme"
-			],
-			[
-				"setting",
-				"Preferences: Settings"
-			],
-			[
-				"dis",
-				"Package Control: Disable Package"
-			],
-			[
-				"ena",
-				"Package Control: Enable Package"
-			],
-			[
-				"package",
-				"Package Control: Disable Package"
-			],
-			[
-				"pretty",
-				"HTMLPrettify"
-			],
-			[
-				"css",
-				"Set Syntax: CSS"
-			],
-			[
-				"sass",
-				"Set Syntax: Sass"
-			],
-			[
-				"setjava",
-				"Set Syntax: JavaScript Next"
-			],
-			[
-				"prettify",
-				"Pretty JSON: Minify (compress) JSON"
-			],
-			[
-				"javsc",
-				"Set Syntax: JavaScript Next"
-			],
-			[
-				"ttr",
-				"Trailing Spaces: Delete Trailing Spaces"
-			],
-			[
-				"tail",
-				"Trailing Spaces: Delete Trailing Spaces"
-			],
-			[
-				"trailn",
-				"Trailing Spaces: Delete Trailing Spaces"
-			],
-			[
-				"CHAN",
-				"ChangeQuotes"
-			],
-			[
-				"xml",
-				"Set Syntax: XML"
-			],
-			[
-				"js",
-				"Set Syntax: JavaScript Next"
-			],
-			[
-				"scss",
-				"Set Syntax: CSS"
-			],
-			[
-				"pre",
-				"Pretty JSON: Format and Sort JSON"
-			],
-			[
-				"pret",
-				"HTMLPrettify"
-			],
-			[
-				"nginx",
-				"Set Syntax: nginx"
-			],
-			[
-				"pvr ",
-				"PackageResourceViewer: Open Resource"
-			],
-			[
-				"makr",
-				"Set Syntax: Markdown Extended"
-			],
-			[
-				"chanm",
-				"GitGutter: Revert Change to Commit"
-			],
-			[
-				"markdow",
-				"Set Syntax: Markdown"
-			],
-			[
-				"t",
-				"Trailing Spaces: Delete Trailing Spaces"
-			],
-			[
 				"sql",
 				"Set Syntax: SQL"
 			],
 			[
-				"trial",
-				"Trailing Spaces: Delete Trailing Spaces"
+				"markd",
+				"Set Syntax: Markdown"
 			],
 			[
-				"ngin",
-				"Set Syntax: nginx"
-			],
-			[
-				"ngi",
-				"Set Syntax: nginx"
-			],
-			[
-				"sort",
-				"Sort Lines"
-			],
-			[
-				"syn html",
-				"Set Syntax: HTML"
-			],
-			[
-				"colorpick",
-				"Color Picker"
-			],
-			[
-				"remove",
+				"removepack",
 				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
 			],
 			[
 				"disabl",
 				"Package Control: Disable Package"
 			],
 			[
-				"dot",
-				"Set Syntax: DotENV"
+				"wrap",
+				"Word Wrap: Toggle"
 			],
 			[
-				"chasn",
-				"ChangeQuotes"
+				"prv:oepn",
+				"PackageResourceViewer: Open Resource"
 			],
 			[
-				"javascript next",
-				"Set Syntax: JavaScript Next"
+				"keybin",
+				"Preferences: Key Bindings"
 			],
 			[
-				"jsa",
-				"Pretty JSON: Format and Sort JSON"
+				"terminus ",
+				"Terminus: Open Default Shell in Panel"
 			],
 			[
-				"javs",
-				"Set Syntax: JavaScript"
+				"terminus list",
+				"Terminus Utilities: Select Theme"
 			],
 			[
-				"railing",
-				"Trailing Spaces: Delete Trailing Spaces"
+				"close",
+				"Terminus: Close All"
 			],
 			[
-				"prett",
-				"HTMLPrettify"
+				"terminus settings",
+				"Preferences: Terminus Settings"
 			],
 			[
-				"disbl",
-				"Package Control: Disable Package"
+				"terminus",
+				"Terminus: Close All"
 			],
 			[
-				"di",
-				"Package Control: Disable Package"
+				"terminus them",
+				"Terminus Utilities: Select Theme"
 			],
 			[
-				"disbal",
-				"Package Control: Disable Package"
+				"close ",
+				"Terminus: Close"
 			],
 			[
-				"disab",
-				"Package Control: Disable Package"
+				"shel",
+				"Terminus: List Shells"
 			],
 			[
-				"taril",
-				"Trailing Spaces: Delete Trailing Spaces"
+				"list",
+				"Terminus: List Shells"
 			],
 			[
-				"prettier",
-				"Preferences: JsPrettier Settings - User"
+				"terminus open",
+				"Terminus: Open Default Shell in Panel"
 			],
 			[
-				"stylus",
-				"Set Syntax: Stylus"
+				"terminus close",
+				"Terminus: Close"
 			],
 			[
-				"lista",
+				"terminu setting",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"terminus shel",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"keybinding",
+				"Preferences: Key Bindings"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"terminust",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"key bi",
+				"Preferences: Key Bindings"
+			],
+			[
+				"prv:o",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package",
+				"View Package File"
+			],
+			[
+				"package list",
 				"Package Control: List Packages"
 			],
 			[
-				"trail",
+				"keybi",
+				"Preferences: Key Bindings"
+			],
+			[
+				"typesct",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"trialing",
 				"Trailing Spaces: Delete Trailing Spaces"
 			],
 			[
-				"html ",
-				"HTMLPrettify"
+				"javac",
+				"Set Syntax: JavaScript"
 			],
 			[
-				"color scheme",
-				"UI: Select Color Scheme"
-			],
-			[
-				"yaml",
-				"Set Syntax: YAML"
-			],
-			[
-				"line",
-				"Line Endings Unify"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
+				"javascript",
+				"Set Syntax: JavaScript"
 			],
 			[
 				"instla",
 				"Package Control: Install Package"
 			],
 			[
-				"beatu",
-				"HTMLBeautify"
+				"log",
+				"Set Syntax: Log Highlight"
 			],
 			[
-				"bash",
-				"Set Syntax: Shell Script (Bash)"
+				"color",
+				"UI: Select Color Scheme"
 			],
 			[
-				"batch",
-				"Set Syntax: Batch File"
+				"markdown",
+				"Set Syntax: Markdown"
 			],
 			[
-				"pretty ",
-				"Pretty JSON: Format and Sort JSON"
-			],
-			[
-				"sidebar",
-				"View: Toggle Open Files in Side Bar"
-			],
-			[
-				"tri",
+				"trailng",
 				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"json ",
+				"Set Syntax: JSON"
+			],
+			[
+				"vue",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			],
+			[
+				"scheme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
 			]
 		],
-		"width": 540.0
+		"width": 0.0
 	},
 	"console":
 	{
-		"height": 247.0,
+		"height": 160.0,
 		"history":
 		[
+			"sublime.log_commands(True)",
+			"p = 12",
+			"let p = 12",
+			"git",
+			"git status;",
+			"git status"
 		]
 	},
 	"distraction_free":
@@ -1030,136 +336,140 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/D/github/squares3"
+	],
 	"file_history":
 	[
-		"/C/github/squares3/package.json",
-		"/C/github/squares3/src/js/game.js",
-		"/C/github/squares3/build/js/bundle.js",
-		"/C/github/squares3/rollup.config.js",
-		"/C/github/squares3/_squares3.sublime-project",
-		"/C/github/squares3/.nolluprc.js",
-		"/C/github/squares3/build/index.html",
-		"/C/github/squares3/build/js/game.min.js",
-		"/C/github/squares3/src/js/styles.js",
-		"/C/github/squares3/src/game.js",
-		"/C/github/squares3/src/js/server.js",
-		"/C/github/cross-stitch-mapper/assets/app.js",
-		"/C/github/cross-stitch-mapper/index.html",
-		"/C/github/cross-stitch-mapper/assets/app.css",
-		"/C/github/cross-stitch-mapper/README.md",
-		"/C/github/cross-stitch-mapper/experiment/colors-app.php",
-		"/C/github/cross-stitch-mapper/experiment/colors-app.json",
-		"/C/github/cross-stitch-mapper/test.html",
-		"/C/github/cross-stitch-mapper/.editorconfig",
-		"/C/github/cross-stitch-mapper/assets/reset.css",
-		"/C/github/cross-stitch-mapper/_csm.sublime-project",
-		"/C/github/cross-stitch-mapper/app.js",
-		"/C/github/cross-stitch-mapper/.gitignore",
-		"/C/github/cross-stitch-mapper/package.json",
-		"/C/github/cross-stitch-mapper/css/reset.css",
-		"/C/github/cross-stitch-mapper/app.css",
-		"/C/github/cross-stitch-mapper/classes.js",
-		"/C/github/cross-stitch-mapper/_acnh.sublime-project",
-		"/C/github/sms-guide/src/app.js",
-		"/C/github/sms-guide/index.html",
-		"/C/github/sms-guide/src/index.html",
-		"/C/github/sms-guide/README.md",
-		"/C/github/sms-guide/app.js",
-		"/C/github/sms-guide/LICENSE",
-		"/C/github/acnh-island-mapper/_acnh.sublime-project",
-		"/C/github/acnh-island-mapper/acnh-islandplanner.html",
-		"/C/github/acnh-island-mapper/app.js",
-		"/C/github/acnh-island-mapper/classes.js",
-		"/C/github/acnh-island-mapper/array.helpers.js",
-		"/C/Users/lappy/Desktop/old.js",
-		"/C/Users/lappy/Desktop/acnh-islandplanner.html",
-		"/C/Users/lappy/Desktop/app.js",
-		"/C/Users/lappy/Desktop/acnh-islandplanner--fail-01.html",
-		"/C/Users/lappy/Downloads/message.txt",
-		"/C/github/my-bookmarks/Dockerfile",
-		"/C/github/testing/index.html",
-		"/C/github/getting-started/requirements.txt",
-		"/C/github/getting-started/docker-compose.yml",
-		"/C/github/getting-started/Dockerfile",
-		"/C/github/getting-started/app/package.json",
-		"/C/github/my-watch-list/api/Controllers/BaseController.php",
-		"/C/github/my-watch-list/api/Controllers/UserController.php",
-		"/C/github/my-watch-list/api/Controllers/MovieController.php",
-		"/C/github/my-watch-list/storage/logs/2020-06-11.app.log",
-		"/C/github/my-watch-list/api/Classes/Token.php",
-		"/C/github/my-watch-list/index.php",
-		"/C/github/my-watch-list/api/helpers.php",
-		"/C/github/my-watch-list/api/Models/Model_User.php",
-		"/C/github/my-watch-list/api/routes.php",
-		"/C/github/my-watch-list/_bin/test-logger.php",
-		"/C/github/my-watch-list/api/Classes/View.php",
-		"/C/github/my-watch-list/api/Controllers/MovieSearchController.php",
-		"/C/github/my-watch-list/api/Models/Model_Movie.php",
-		"/C/github/my-watch-list/storage/logs/2020-06-10.app.log",
-		"/C/github/my-watch-list/client/views/MovieList.vue",
-		"/C/github/my-watch-list/client/main.js",
-		"/C/github/my-watch-list/api/View.php",
-		"/C/github/my-watch-list/api/Token.php",
-		"/C/github/my-watch-list/api/Logger.php",
-		"/C/github/my-watch-list/client/components/MovieSearch.vue",
-		"/C/github/my-watch-list/client/styl/base.styl",
-		"/C/github/my-watch-list/client/styl/_forms.styl",
-		"/C/github/my-watch-list/api/storage/logs/2020-06-05.app.log",
-		"/C/github/my-watch-list/api/storage/logs/2020-06-04.app.log",
-		"/C/github/my-watch-list/client/views/Login.vue",
-		"/C/github/my-watch-list/client/views/Register.vue",
-		"/C/github/my-watch-list/client/styl/_layout.styl",
-		"/C/github/my-watch-list/api/resources/views/app/main.blade.php",
-		"/C/github/my-watch-list/client/config/filters.config.js",
-		"/C/github/my-watch-list/client/styl/_mvp.styl",
-		"/C/github/my-watch-list/storage/logs/2020-05-25.app.log",
-		"/C/github/my-watch-list/client - svelte/Views/MovieList.svelte",
-		"/C/github/my-watch-list/public/assets/bundle.js",
-		"/C/github/my-watch-list/client/store/subscriber.js",
-		"/C/github/my-watch-list/client/store/auth.js",
-		"/C/github/my-watch-list/client/App.vue",
-		"/C/github/my-watch-list/client/components/Navigation.vue",
-		"/C/github/my-watch-list/resources/views/app/main.blade.php",
-		"/C/github/my-watch-list/client/config/pages.config.js",
-		"/C/github/my-watch-list/client/config/routes.config.js",
-		"/C/github/my-watch-list/rollup.config.js",
-		"/C/github/my-watch-list/.env",
-		"/C/github/my-watch-list/client/config/movies.config.js",
-		"/C/github/my-watch-list/.env.example",
-		"/C/github/my-watch-list/client/store/movies.js",
-		"/C/github/my-watch-list/client/store/index.js",
-		"/C/github/my-watch-list/client/Views/MovieList.vue",
-		"/C/github/my-watch-list/client/services/user.service.js",
-		"/C/github/my-watch-list/client/Views/Login.vue",
-		"/C/github/my-watch-list/client/Views/Register.vue",
-		"/C/github/my-watch-list/api/Middleware/AuthMiddleware.php",
-		"/C/github/my-watch-list/client/store/store.js",
-		"/C/github/my-watch-list/client/store/auth.store.js",
-		"/C/github/my-watch-list/client/store/movies.store.js",
-		"/C/github/my-watch-list/package.json",
-		"/C/github/my-watch-list/client/store.js",
-		"/C/github/my-watch-list/client/Components/MovieSearch.vue",
-		"/C/github/my-watch-list/client/Services/movies.service.js",
-		"/C/github/my-watch-list/_bin/build.js",
-		"/C/github/my-watch-list/client/Config/Routes.js",
-		"/C/github/my-watch-list/client/Config/Filters.js",
-		"/C/github/my-watch-list/client - svelte/routes.js",
-		"/C/github/my-watch-list/public/js/bundle.js",
-		"/C/github/my-watch-list/snowpack.config.json",
-		"/C/github/my-watch-list/client/Config/Movies.js",
-		"/C/github/my-watch-list/public/js/bundle.js.map",
-		"/C/github/my-watch-list/composer.json",
-		"/C/github/my-watch-list/client - svelte/Config/Routes.js",
-		"/C/github/my-watch-list/client/Views/Settings.vue",
-		"/C/github/my-watch-list/client/Views/ForgotPassword.vue",
-		"/C/github/my-watch-list/client/Views/NotFound.vue",
-		"/C/github/my-watch-list/client/Views/Register.svelte",
-		"/C/github/my-watch-list/client/Views/NotFound.svelte",
-		"/C/github/my-watch-list/client/routes.js",
-		"/C/github/my-watch-list/.bin/build.js",
-		"/C/github/my-watch-list/.bin/post-install.php",
-		"/C/github/my-watch-list/src/client/styl/base.styl",
-		"/C/github/my-watch-list/src/client/styl/_mvp.styl"
+		"/D/github/squares3/package.json",
+		"/D/github/squares3/README.md",
+		"/D/github/squares3/js/game.js",
+		"/D/github/squares3/.gitignore",
+		"/D/github/squares3/index.html",
+		"/D/github/cross-stitch-designer/index.html",
+		"/D/github/squares3/.editorconfig",
+		"/D/github/cross-stitch-designer/assets/app.js",
+		"/D/github/cross-stitch-designer/assets/app.css",
+		"/D/github/cross-stitch-designer/__designs/jason.json",
+		"/D/github/cross-stitch-designer/__designs/plague doctor - 12-9-2020.json",
+		"/D/github/cross-stitch-designer/__designs/plague doctor.json",
+		"/D/github/cross-stitch-designer/__designs/whatever bitch unicorn.json",
+		"/D/github/cross-stitch-designer/data/colors-sorted.json",
+		"/D/github/cross-stitch-designer/data/colors.json",
+		"/D/github/cross-stitch-designer/data/sort-colors.php",
+		"/D/github/cross-stitch-designer/__designs/witch stitcher.json",
+		"/D/github/cross-stitch-designer/__designs/unicorn bitch whatever.json",
+		"/D/github/cross-stitch-designer/README.md",
+		"/D/github/cross-stitch-designer/ROADMAP.md",
+		"/D/github/cross-stitch-designer/data/colors-hex.json",
+		"/D/github/cross-stitch-designer/experiment/colors-app.json",
+		"/D/github/cross-stitch-designer/_csm.sublime-project",
+		"/D/github/cross-stitch-designer/experiment/colors-app.php",
+		"/D/github/cross-stitch-designer/assets/vue.min.js",
+		"/D/github/cross-stitch-designer/test.php",
+		"/D/github/cross-stitch-designer/package.json",
+		"/D/github/cross-stitch-designer/__tests/plague doctor.json",
+		"/D/github/cross-stitch-designer/vite/src/App.vue",
+		"/D/github/cross-stitch-designer/vite/src/main.js",
+		"/D/github/cross-stitch-designer/vite/src/components/Toolbar.vue",
+		"/D/github/cross-stitch-designer/vite/node_modules/vue-p5/src/p5.vue",
+		"/D/github/cross-stitch-designer/vite/src/components/Sketch.vue",
+		"/D/github/cross-stitch-designer/vite/package.json",
+		"/D/github/cross-stitch-designer/vite/vite.config.js",
+		"/D/github/cross-stitch-designer/server.js",
+		"/D/github/cross-stitch-designer/vite/node_modules/vue-p5/dist/vue-p5.js",
+		"/D/github/cross-stitch-designer/temp/src/components/Sketch.vue",
+		"/D/github/cross-stitch-designer/temp/package.json",
+		"/D/github/cross-stitch-designer/temp/src/App.vue.bak",
+		"/D/github/cross-stitch-designer/temp/src/App.vue",
+		"/D/github/cross-stitch-designer/temp/public/index.html",
+		"/D/github/cross-stitch-designer/temp/snowpack.config.js",
+		"/D/github/cross-stitch-designer/temp/src/index.js",
+		"/D/github/cross-stitch-designer/temp/.editorconfig",
+		"/D/github/nanowrimo-the-reaping/composer.json",
+		"/D/github/ibis/composer.json",
+		"/D/github/mcminn-ls-db/webapp/nuxt.config.js",
+		"/D/github/mcminn-ls-db/webapp/plugins/vuex-persist.js",
+		"/D/github/mcminn-ls-db/api/app/helpers.php",
+		"/D/github/mcminn-ls-db/webapp/pages/dashboard.vue",
+		"/D/github/mcminn-ls-db/webapp/data/states.js",
+		"/D/github/mcminn-ls-db/webapp/components/Navbar.vue",
+		"/D/github/mcminn-ls-db/webapp/layouts/default.vue",
+		"/D/github/mcminn-ls-db/webapp/.nuxt/dist/server/index.spa.html",
+		"/D/github/mcminn-ls-db/.docker/php/Dockerfile",
+		"/D/github/mcminn-ls-db/webapp/helpers/auth.js",
+		"/D/github/mcminn-ls-db/webapp/pages/login.vue",
+		"/D/github/mcminn-ls-db/api/app/Models/User.php",
+		"/D/github/mcminn-ls-db/api/app/Controllers/AdminController.php",
+		"/D/github/mcminn-ls-db/webapp/store/index.js",
+		"/D/github/mcminn-ls-db/webapp/package.json",
+		"/D/github/mcminn-ls-db/docker-compose.yaml",
+		"/D/github/mcminn-ls-db/.docker/php/api.localhost.conf",
+		"/D/github/mcminn-ls-db/.docker/php/client.localhost.conf",
+		"/D/github/mcminn-ls-db/webapp/pages/newjob.vue",
+		"/D/github/mcminn-ls-db/webapp/middleware/auth-check.js",
+		"/D/github/mcminn-ls-db/api/app/Models/Session.php",
+		"/D/github/mcminn-ls-db/api/app/Middleware/AuthMiddleware.php",
+		"/D/github/mcminn-ls-db/api/app/Controllers/AuthController.php",
+		"/D/github/mcminn-ls-db/__api/config/auth.php",
+		"/D/github/mcminn-ls-db/webapp/.nuxt/workbox.js",
+		"/D/github/mcminn-ls-db/webapp/helpers/storage.js",
+		"/D/github/mcminn-ls-db/webapp/pages/Dashboard.vue",
+		"/D/github/mcminn-ls-db/webapp/pages/index.vue",
+		"/D/github/mcminn-ls-db/.editorconfig",
+		"/D/github/mcminn-ls-db/api/composer.json",
+		"/D/github/mcminn-ls-db/api/.env",
+		"/D/github/mcminn-ls-db/api/app/bootstrap.php",
+		"/D/github/mcminn-ls-db/api/app/Classes/Log.php",
+		"/D/github/mcminn-ls-db/api/storage/logs/2020-11-02.log",
+		"/D/github/mcminn-ls-db/api/app/Models/Jobs.php",
+		"/D/github/mcminn-ls-db/api/public/index.php",
+		"/D/github/mcminn-ls-db/api/app/Controllers/ClientsController.php",
+		"/D/github/mcminn-ls-db/api/app/Controllers/JobsController.php",
+		"/D/github/mcminn-ls-db/api/app/Controllers/PropertiesController.php",
+		"/D/github/mcminn-ls-db/api/app/routes.php",
+		"/D/github/mcminn-ls-db/api/app/Middleware/CustomExceptionHandler.php",
+		"/D/github/mcminn-ls-db/api/app/Middleware/CORSMiddleware.php",
+		"/D/github/mcminn-ls-db/api/app/Classes/Str.php",
+		"/D/github/mcminn-ls-db/.gitignore",
+		"/D/github/mcminn-ls-db/webapp/.gitignore",
+		"/D/github/mcminn-ls-db/__api/.env",
+		"/vendor/pecee/simple-router/src/Pecee/SimpleRouter/Route/Route.php",
+		"/app/Controllers/AuthController.php",
+		"/D/github/mcminn-ls-db/api/__test.php",
+		"/D/github/mcminn-ls-db/api/storage/logs/06:23:24.159299",
+		"/D/github/mcminn-ls-db/api/public/__test.php",
+		"/D/github/mcminn-ls-db/api/public/.htaccess",
+		"/D/github/mcminn-ls-db/api/.htaccess",
+		"/D/github/mcminn-ls-db/api/index.php",
+		"/D/github/mcminn-ls-db/__api/app/Models/User.php",
+		"/D/github/mcminn-ls-db/webapp/pages/Login.vue",
+		"/D/github/mcminn-ls-db/api/app/__routes.php",
+		"/D/github/mcminn-ls-db/desktop-client/index.js",
+		"/C/Users/Desky/AppData/Roaming/Sublime Text 3/Packages/INI/Comments.tmPreferences",
+		"/D/github/mcminn-ls-db/.docker/php/php.ini",
+		"/D/github/mcminn-ls-db/api/.env.local",
+		"/C/Users/Desky/AppData/Roaming/Sublime Text 3/Packages/PHP/Comments.tmPreferences",
+		"/D/github/mcminn-ls-db/webapp/pages/ForgotPassword.vue",
+		"/D/github/mcminn-ls-db/api/app/Controllers/HttpController.php",
+		"/C/Users/Desky/AppData/Roaming/Sublime Text 3/Packages/PHP/PHP.sublime-syntax",
+		"/C/Users/Desky/AppData/Roaming/Sublime Text 3/Packages/PHP/PHP Source.sublime-syntax",
+		"/C/Users/Desky/AppData/Roaming/Sublime Text 3/Packages/User/INI.sublime-settings",
+		"/C/Users/Desky/AppData/Roaming/Sublime Text 3/Packages/INI/INI.sublime-syntax",
+		"/C/Users/Desky/AppData/Roaming/Sublime Text 3/Packages/EditorConfig/INI.tmLanguage",
+		"/D/github/mcminn-ls-db/api/.env.example",
+		"/D/github/mcminn-ls-db/api/.env.prod",
+		"/D/github/mcminn-ls-db/api/README.md",
+		"/C/Users/Desky/AppData/Roaming/Sublime Text 3/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/C/Users/Desky/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/D/github/mcminn-ls-db/.docker/php/vhost.conf",
+		"/D/github/mcminn-ls-db/api/storage/logs/error_apache.log",
+		"/D/github/mcminn-ls-db/.docker/apache/Dockerfile",
+		"/D/github/mcminn-ls-db/.docker/apache/vhost.conf",
+		"/D/github/mcminn-ls-db/composer.lock",
+		"/D/github/mcminn-ls-db/.docker/vhost.conf",
+		"/D/github/mcminn-ls-db/api/vendor/laminas/laminas-stdlib/src/JsonSerializable.php"
 	],
 	"find":
 	{
@@ -1167,7 +477,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 170.0,
+		"height": 117.0,
 		"where_history":
 		[
 			""
@@ -1178,134 +488,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"SCENES_LIST",
-			"Game.state.",
-			"sceneIdId",
-			"Game.scene",
-			",",
-			"prototype.",
-			"SCENE_HOME",
+			"wav",
+			"playButton",
+			"transitionScene",
 			"SceneHomeScreen",
-			"HomeScene",
-			"new",
-			"name",
-			"HomeScene",
-			"SCENES_LIST",
-			"transitionScene",
-			"keyPressed",
-			"mousePressed",
-			"byline",
-			"game.name",
-			"STATE_HOME",
-			"STATE_HELP",
-			"STATE_GAME",
-			"STATE_GAMEOVER",
-			"STATE_GAME",
-			"STATE_HELP",
-			"STATE_HOME",
-			"STATE_HELP",
-			"STATE_GAME",
-			"gameState",
-			"SCENES_LIST",
-			"transitionScene",
-			"STATE_HELP",
-			"\n\n\n\nfunction",
-			"}\n\n\n\n\nfunction",
-			"postcss",
-			"public",
-			"game.min",
-			"bundle",
-			"main",
-			"open",
-			"public",
-			"app",
-			"default",
-			"public",
+			"draw",
+			"let",
+			"{\n\n    }",
+			"CD3131",
+			"COLOR_RED",
+			"COLOR_WHITE",
+			"HomescreenShapes",
+			"play",
+			"GAME_NAME",
+			"SOUND_MAIN_LOOP",
+			"GAME_WIDTH",
+			"GAME_STATE",
+			"GAME_OFFSET",
+			"GAME_HEIGHT",
+			"Height",
+			"const",
+			"GAME_NAME",
+			"SceneHomeScreen",
+			"SceneHome",
+			"SceneHomeScreen",
+			"homescreen",
+			"helpscreen",
+			"gamescreen",
+			"SceneGameScreen",
+			"helpscreen",
+			"SceneHelpSceen",
+			"homescreen",
+			"init",
+			"STATE_HOMESCREEN",
+			"STATE_PLAYING_LOFI",
+			"toggleAudioTracks",
+			"drawHomeScreen",
+			"GAME_STATE",
+			"STATE_CURRENT_SCENE",
+			"=",
+			"SPAWN_Y_MIN",
+			"SPAWN_Y_MAX",
+			"SPAWN_X_MIN",
+			"SPAWN_MAX_X",
+			"SPAWN_X_MAX",
+			"> 0 ",
+			"Y_",
+			"outsdie",
+			"STATE_RED",
+			"STATE_BLACK",
+			"CIRCLE",
+			"circle",
+			"CIRCLE",
+			"SQUARE",
+			"square",
+			"SQUARE",
+			"SECONDS",
+			"'y'",
+			"'x'",
+			"square",
+			"circle",
+			"speed",
+			"squre",
+			"square",
+			"getVector",
+			"GAME_WIDTH",
+			"600",
+			"transitionRate",
+			"0.3",
+			"transitionRate",
+			"2",
+			"20",
 			";",
-			"from",
-			"dest",
+			"assets",
+			"song",
 			"<<<<<",
-			"designColorsQuery",
-			"<<<<",
-			"drawLines",
-			"oke(this.settings.designColors[colorIndex].color)\n                sk.line(x1 *",
-			"        //     // sk.fill(this.getDrawColor(colorId))\n            //     // sk.square(Number(x) * tilesize, Number(y) * tilesize, tilesize)\n\n            // }, this)\n        },\n",
-			"     // sk.strokeWeight(0)\n                // sk.fill(this.getDrawColor(colorId))\n                // sk.square(Number(x) * tilesize, Number(y) * tilesize, tilesize)\n\n                tindex -= 1\n            }",
-			"<<<<",
-			"designColors",
-			"drawCursor",
-			"btn--affirm",
-			"affirm",
-			"border-color",
-			"btn-affirm",
-			"e=\"cancel\">Cancel</",
-			"e=\"cancel\">Cancel</button>\n                    <button id=\"confirmDocumentSettings",
-			" value=\"cancel\">Cancel</",
-			"alue=\"cancel\">Cancel</b",
-			"MODAL_SELECTED_COLOR",
-			"MODAL_NEW_COLOR",
-			"MODAL_DOCUMENT_INFO",
-			"openDialog",
-			"MODAL_NEW_COLOR",
-			"MODAL_SELECTED_COLOR",
-			"MODAL_DOCUMENT_INFO",
-			"<<<<",
-			"<<<<<",
-			"<<<<",
-			"open",
-			".form-group",
-			"       <div title=\"Show/hide the cursor location markers at edge of design grid\">\n                    <input type=\"checkbox\"\n                        id=\"settings.showCursorMarkers\"\n                        v-model=\"settings.showCursorMarkers\"\n                    />\n                    <label for=\"settings.showCursorMarkers\">Show cursor markers</label>\n                </div>",
-			"how cursor mark",
-			"drawCenterMarker",
-			"drawCenter",
-			"activeTool",
-			"this.colors",
-			"drawTriangle",
-			"drawGrid",
-			"drawTriangle",
-			"selectedColor.id",
-			"selectColor",
-			"color",
-			"colorId",
+			"main",
+			"<<<<<<",
+			"this.settings.colorMap",
+			"this.colorMap",
+			"colorMap",
+			"updateColorMap",
 			"selectedColor",
-			"moveColor",
-			"moveLayer",
-			"moveColor",
-			"moveLayer",
+			"colorMap",
+			"this.settings.colorMap[this.settings.selectedColor]",
+			"nextIndex",
 			"deleteLayer",
-			"selectedColor",
-			"settings:",
-			"selectedColor",
-			"sortColorsBy",
-			"sortCollectionBy",
-			"colors",
-			"sortColorsBy",
-			"sortColorsList",
-			"color",
-			"sortColors",
-			"color",
-			"colorList",
-			"sortColors",
-			"[][[][][][][][",
-			"getKeyCommand",
-			"keyIsDown",
-			"isMouseDragging",
-			"isMouseDraggingEvent",
-			"isBrushDrawing",
-			"mouseclicked",
-			"keyIsDown",
-			"mousereleased",
-			"keypressed",
-			"key",
-			"= getKeyCommand",
-			"getKeyCommand",
-			"keyOrMouse",
-			"getDesignPixelDimensions",
-			"get",
-			"mouseMoved",
-			"mousemoved",
-			"mouseDragged",
-			"mouseClicked"
+			"start",
+			"center",
+			"text-left",
+			"text-right",
+			"deleteLayer",
+			"\\[selected",
+			"----selected-color",
+			"(----selected-color",
+			"selected-background-color",
+			"selectd-background-color",
+			"color-edit-component",
+			"dialogdialog",
+			"ColorEditComponent",
+			"script",
+			"template",
+			"ColorEditComponet",
+			"name",
+			"label",
+			"this.colorResults[tempColor.id]",
+			"this.colorResults",
+			"tempColor",
+			"tempColor.color",
+			"tempColor",
+			"addNewColor",
+			"colorsQuery",
+			"colorResults",
+			"colorsResults",
+			"colorsList",
+			"colorResults",
+			"colorsResults",
+			"colorResults",
+			"isSearching",
+			"debounceTimeoutColorSearch",
+			"this.debounceTimeout",
+			"debounceTimeout",
+			"debounceTimeoutColorSearch",
+			";",
+			"computed",
+			"debounce",
+			"colorsFilterString",
+			"filterString",
+			"filteredColors"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1313,6 +623,17 @@
 		"regex": true,
 		"replace_history":
 		[
+			"deleteColor",
+			"selectedColor",
+			"addNewColor",
+			"newColor",
+			"showGridCenterMarkers",
+			"newLayer",
+			"deleteLayer",
+			"moveLayer",
+			"selectedLayer",
+			"selectLayer",
+			"nextLayer"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1323,167 +644,18 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "js/game.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8316,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5132,
-								5132
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2803.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 283,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								174,
-								174
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Materialize/Langs/npm JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"file": "reference/01-homescreen.png",
-					"semi_transient": false,
-					"stack_index": 2,
-					"type": "image"
-				},
-				{
-					"buffer": 2,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1477,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								330,
-								330
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "css/app.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5323,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								699,
-								699
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 717.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 24.0
 	},
 	"input":
 	{
-		"height": 42.0
+		"height": 40.8
 	},
 	"layout":
 	{
@@ -1494,12 +666,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -1510,11 +676,14 @@
 		"rows":
 		[
 			0.0,
-			0.691973947784,
 			1.0
 		]
 	},
 	"menu_visible": true,
+	"output.Terminus":
+	{
+		"height": 127.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -1523,7 +692,7 @@
 	"project": "_squares3.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1534,515 +703,187 @@
 		[
 			[
 				"app.css",
-				"css\\app.css"
+				"assets\\app.css"
 			],
 			[
 				"index.html",
-				"build\\index.html"
-			],
-			[
-				"game.js",
-				"src\\js\\game.js"
+				"index.html"
 			],
 			[
 				"app.js",
 				"assets\\app.js"
 			],
 			[
-				"readme",
-				"README.md"
-			],
-			[
-				"index.php",
-				"index.php"
-			],
-			[
-				"token",
-				"api\\Classes\\Token.php"
-			],
-			[
-				"movie",
-				"client\\views\\MovieList.vue"
-			],
-			[
-				"form",
-				"client\\styl\\_forms.styl"
-			],
-			[
-				"base",
-				"client\\styl\\base.styl"
-			],
-			[
-				"routes",
-				"api\\routes.php"
-			],
-			[
-				"main.",
-				"api\\resources\\views\\app\\main.blade.php"
-			],
-			[
-				"index",
-				"index.php"
-			],
-			[
-				"helper",
-				"api\\helpers.php"
-			],
-			[
-				"loy",
-				"client\\styl\\_layout.styl"
-			],
-			[
-				"ovielist",
-				"client\\views\\MovieList.vue"
-			],
-			[
-				"register",
-				"client\\views\\Register.vue"
-			],
-			[
-				"login",
-				"client\\views\\Login.vue"
-			],
-			[
-				"base.",
-				"client\\styl\\base.styl"
-			],
-			[
-				"helpers",
-				"api\\helpers.php"
-			],
-			[
-				"base.styl",
-				"client\\styl\\base.styl"
-			],
-			[
-				"filter",
-				"client\\config\\filters.config.js"
-			],
-			[
-				"movieserah",
-				"client\\components\\MovieSearch.vue"
-			],
-			[
-				"movielist",
-				"client\\views\\MovieList.vue"
-			],
-			[
-				"app.vue",
-				"client\\App.vue"
-			],
-			[
-				"main.blad",
-				"resources\\views\\app\\main.blade.php"
-			],
-			[
-				"mvp",
-				"client\\styl\\_mvp.styl"
-			],
-			[
-				"rollup",
-				"rollup.config.js"
-			],
-			[
-				"layout",
-				"client\\styl\\_layout.styl"
-			],
-			[
-				"login.vue",
-				"client\\views\\Login.vue"
-			],
-			[
-				"navigation",
-				"client\\components\\Navigation.vue"
-			],
-			[
-				"bundle",
-				"public\\assets\\bundle.js"
-			],
-			[
-				"auth.js",
-				"client\\store\\auth.js"
-			],
-			[
-				"routes.confi",
-				"client\\config\\routes.config.js"
-			],
-			[
-				"main.js",
-				"client\\main.js"
-			],
-			[
-				"auth",
-				"client\\store\\auth.js"
-			],
-			[
-				"model",
-				"api\\Models\\Model_User.php"
-			],
-			[
-				".env",
-				".env"
-			],
-			[
-				"baseconto",
-				"api\\Controllers\\BaseController.php"
-			],
-			[
-				"log/",
-				"storage\\logs\\2020-05-25.app.log"
-			],
-			[
-				"usercon",
-				"api\\Controllers\\UserController.php"
-			],
-			[
-				"routes.php",
-				"api\\routes.php"
-			],
-			[
-				"routes.config",
-				"client\\config\\routes.config.js"
-			],
-			[
-				"movies.js",
-				"client\\store\\movies.js"
-			],
-			[
-				"store",
-				"client\\store\\store.js"
-			],
-			[
-				"model_user",
-				"api\\Models\\Model_User.php"
-			],
-			[
-				"helpers.",
-				"api\\helpers.php"
-			],
-			[
-				"helpers.ph",
-				"api\\helpers.php"
-			],
-			[
-				"rgister",
-				"client\\Views\\Register.vue"
-			],
-			[
-				"app.veu",
-				"client\\App.vue"
-			],
-			[
-				"routes.js",
-				"client\\Config\\Routes.js"
-			],
-			[
-				"main",
-				"resources\\views\\app\\main.blade.php"
-			],
-			[
-				"base.st",
-				"src\\client\\styl\\base.styl"
-			],
-			[
-				"layo",
-				"src\\client\\styl\\_layout.styl"
-			],
-			[
-				"Views",
-				"src\\client\\Views\\Settings.svelte"
-			],
-			[
-				"roll",
-				"rollup.config.js"
-			],
-			[
-				"forgot",
-				"src\\client\\Views\\ForgotPassword.svelte"
-			],
-			[
-				"layou",
-				"src\\client\\styl\\_layout.styl"
+				"ap.css",
+				"assets\\app.css"
 			],
 			[
 				"package",
 				"package.json"
 			],
 			[
-				"app",
-				"src\\client\\App.svelte"
+				"readm",
+				"README.md"
 			],
 			[
 				"packag",
 				"package.json"
 			],
 			[
-				"composer",
-				"composer.json"
+				"readme",
+				"README.md"
 			],
 			[
-				"rol",
-				"rollup.config.js"
+				"canvas",
+				"temp\\src\\components\\Canvas.vue"
 			],
 			[
-				"pack",
-				"package.json"
+				"help",
+				"api\\app\\helpers.php"
 			],
 			[
-				"modal",
-				"src\\client\\Components\\Modal.svelte"
+				"login",
+				"webapp\\pages\\login.vue"
 			],
 			[
-				"font",
-				"src\\client\\styl\\fontawesome\\_fontawesome.styl"
+				"default.vue",
+				"webapp\\layouts\\default.vue"
 			],
 			[
-				"odal",
-				"src\\client\\Components\\Modal.svelte"
+				"helpers",
+				"api\\app\\helpers.php"
 			],
 			[
-				"movies",
-				"src\\client\\Views\\MovieList.svelte"
+				"admin",
+				"api\\app\\Controllers\\AdminController.php"
 			],
 			[
-				"app.sve",
-				"src\\client\\App.svelte"
+				"models/user",
+				"api\\app\\Models\\User.php"
 			],
 			[
-				"mian.blad",
-				"resources\\views\\app\\main.blade.php"
+				"authmiddle",
+				"api\\app\\Middleware\\AuthMiddleware.php"
 			],
 			[
-				"base.cs",
-				"public\\css\\base.css"
+				"session",
+				"api\\app\\Models\\Session.php"
 			],
 			[
-				"main.css",
-				"public\\css\\main.css"
+				"session.php",
+				"api\\app\\Models\\Session.php"
 			],
 			[
-				"build-",
-				"bin\\build-stylus.js"
+				"hepe",
+				"api\\app\\helpers.php"
 			],
 			[
-				"app/main",
-				"resources\\views\\app\\main.blade.php"
+				"auth",
+				"api\\app\\Controllers\\AuthController.php"
 			],
 			[
-				"view",
-				"src\\api\\View.php"
+				"auth.php",
+				"__api\\config\\auth.php"
 			],
 			[
-				"main.blade",
-				"resources\\views\\app\\main.blade.php"
-			],
-			[
-				"main.bla",
-				"resources\\views\\app\\main.blade.php"
-			],
-			[
-				"stuf",
-				"resources\\views\\app\\stuff.blade.php"
-			],
-			[
-				"app.s",
-				"src\\client\\App.svelte"
-			],
-			[
-				"route",
-				"src\\api\\routes.php"
-			],
-			[
-				"service",
-				"app\\controllers\\ServiceController.php"
-			],
-			[
-				"bot",
-				"app\\bootstrap.php"
-			],
-			[
-				"servi",
-				"app\\controllers\\ServiceController.php"
-			],
-			[
-				"boot",
-				"app\\bootstrap.php"
-			],
-			[
-				"logger",
-				"app\\utils\\Logger.php"
-			],
-			[
-				"main.php",
-				"app\\main.php"
-			],
-			[
-				"client.",
-				"app\\controllers\\client.php"
-			],
-			[
-				"author.twig",
-				"src\\views\\partials\\author.twig"
-			],
-			[
-				"site.",
-				"config\\site.js"
-			],
-			[
-				"serv.js",
-				"serve.js"
+				"navbar",
+				"webapp\\components\\Navbar.vue"
 			],
 			[
 				"default",
-				"src\\views\\default.twig"
+				"webapp\\layouts\\default.vue"
 			],
 			[
-				"finances",
-				"content\\archives\\finances\\stop-blaming-the-poor-for-being-poor.md"
+				"nuxt.conf",
+				"webapp\\nuxt.config.js"
 			],
 			[
-				"serv",
-				"serve.js"
+				"log",
+				"webapp\\pages\\Login.vue"
 			],
 			[
-				"reset",
-				"src\\styl\\_reset.styl"
+				"user.php",
+				"api\\app\\Models\\User.php"
 			],
 			[
-				"config",
-				"config\\site.js"
+				"helpesr",
+				"api\\app\\helpers.php"
 			],
 			[
-				"serve.js",
-				"serve.js"
+				"boot",
+				"api\\app\\bootstrap.php"
 			],
 			[
-				"archive.twig",
-				"src\\views\\archives.twig"
+				"customex",
+				"api\\app\\Middleware\\CustomExceptionHandler.php"
 			],
 			[
-				"main.styl",
-				"src\\styl\\main.styl"
+				"index.php",
+				"api\\public\\index.php"
 			],
 			[
-				"serve",
-				"serve.js"
+				"helper",
+				"api\\app\\helpers.php"
 			],
 			[
-				"layout.twi",
-				"src\\views\\_layout.twig"
+				"bootas",
+				"api\\app\\bootstrap.php"
 			],
 			[
-				"site",
-				"config\\site.js"
+				"authcon",
+				"api\\app\\Controllers\\AuthController.php"
 			],
 			[
-				"layout.twig",
-				"src\\views\\_layout.twig"
+				"routes",
+				"api\\app\\routes.php"
 			],
 			[
-				"homepage",
-				"src\\views\\homepage.twig"
+				".env",
+				"api\\.env"
 			],
 			[
-				"conemu.xml",
-				"cmder\\vendor\\conemu-maximus5\\ConEmu.xml"
+				"login.vue",
+				"webapp\\pages\\Login.vue"
 			],
 			[
-				"post",
-				"src\\views\\partials\\post-excerpt.twig"
+				"boots",
+				"api\\app\\bootstrap.php"
 			],
 			[
-				"layout-styles",
-				"src\\views\\tests\\layout-styles.twig"
+				"route",
+				"api\\app\\routes.php"
 			],
 			[
-				"hom",
-				"src\\views\\homepage.twig"
+				"bootstra",
+				"api\\app\\bootstrap.php"
 			],
 			[
-				"archives",
-				"src\\views\\archives.twig"
+				"index.js",
+				"desktop-client\\index.js"
 			],
 			[
-				"home",
-				"src\\views\\homepage.twig"
+				"routes.php",
+				"api\\app\\routes.php"
 			],
 			[
-				"about.twi",
-				"src\\views\\about.twig"
+				"ini",
+				".docker\\php\\php.ini"
 			],
 			[
-				"site.js",
-				"config\\site.js"
+				"custome",
+				"api\\app\\Middleware\\CustomExceptionHandler.php"
 			],
 			[
-				"livere",
-				"src\\views\\partials\\livereload.twig"
+				"cors",
+				"api\\app\\Middleware\\CORSMiddleware.php"
 			],
 			[
-				"paths.js",
-				"src\\paths.js"
+				"js",
+				"api\\vendor\\laminas\\laminas-stdlib\\src\\JsonSerializable.php"
 			],
 			[
-				"reset.styl",
-				"src\\styl\\_reset.styl"
-			],
-			[
-				"throwd",
-				"src\\Throwdown.js"
-			],
-			[
-				"atom",
-				"src\\views\\atomfeed.twig"
-			],
-			[
-				"servej",
-				"serve.js"
-			],
-			[
-				"blog",
-				"content\\blog.md"
-			],
-			[
-				"",
-				"content\\blog\\testing.md"
-			],
-			[
-				"conten",
-				"src\\content.helpers.js"
-			],
-			[
-				"site.j",
-				"config\\site.json"
-			],
-			[
-				"content.",
-				"src\\content.helpers.js"
-			],
-			[
-				"gulp",
-				"gulpfile.js"
-			],
-			[
-				".styl",
-				"src\\styl\\main.styl"
-			],
-			[
-				"ser",
-				"serve.js"
-			],
-			[
-				"node",
-				"nodemon.json"
-			],
-			[
-				"site.json",
-				"config\\site.json"
-			],
-			[
-				"boos",
-				"src\\bootstrap.php"
+				"nav",
+				"webapp\\components\\Navbar.vue"
 			]
 		],
 		"width": 0.0
@@ -2059,9 +900,13 @@
 	"select_symbol":
 	{
 		"height": 392.0,
-		"last_filter": "",
+		"last_filter": "parse_token",
 		"selected_items":
 		[
+			[
+				"parse_token",
+				"parse_token"
+			]
 		],
 		"width": 592.0
 	},
@@ -2073,7 +918,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 230.0,
+	"side_bar_width": 191.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

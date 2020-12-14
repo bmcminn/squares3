@@ -3,9 +3,28 @@
   "version": "0.1.0",
   "description": "An HTML5 version of the Squares 2 flash game by Gavin Shapiro",
   "main": "index.js",
-  "scripts": {
-  	"start": "php -S localhost:3005"
-  },
   "author": "BranacleBoy <https://github.com/bmcminn>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.16.2",
+    "rollup-plugin-copy-assets": "^2.0.3",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^5.0.0",
+    "serve": "^11.0.2"
+  },
+  "dependencies": {
+    "date-fns": "^1.30.1",
+    "p5": "^1.1.9"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "npm-run-all --parallel start watch",
+    "start": "serve public",
+    "start:php": "php -S localhost:3005"
+  }
 }
