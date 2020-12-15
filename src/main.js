@@ -128,7 +128,7 @@ class SceneHelpScreen extends Scene {
     }
 
     setup() {
-        this.directions = window.select('#directions')
+        this.directions = this.directions ?? window.select('#directions')
         this.directions.show()
         this.directions.position(window.width / 2, window.height / 2)
 
