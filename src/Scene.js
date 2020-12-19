@@ -12,6 +12,8 @@ class Scene {
 
     mousePressed() {}
 
+    mouseDrag() {}
+
     keyDown() {}
 
     keyPressed() {}

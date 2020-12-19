@@ -9,24 +9,39 @@ export function randomInt(range = 1) {
 
 
 
-export function outside(i, r1, r2) {
-
+export function isOutsideBounds(x, y, xmin, ymin, xmax, ymax) {
+    return x < xmin || xmax < x || y < ymin || ymax < y
 }
 
 
 
-export function transitionScene(newSceneId) {
+export function transitionScene(event) {
 
-    if (window.ACTIVE_SCENE_ID && window.ACTIVE_SCENE_ID === newSceneId) { return }
+    let newSceneId = event?.target?.dataset?.sceneId ?? -1
 
-    if (SCENES_LIST[window.ACTIVE_SCENE_ID]) {
-        console.debug('transition::destroy', SCENES_LIST[window.ACTIVE_SCENE_ID].name)
-        SCENES_LIST[window.ACTIVE_SCENE_ID].destroy()
+    if (event?.buttons && event.buttons > 1) { return }
+
+    if (newSceneId < 0) { return false }
+
+    if (window.Game?.ACTIVE_SCENE_ID === newSceneId) { return }
+
+    if (SCENES_LIST[window.Game.ACTIVE_SCENE_ID]) {
+        SCENES_LIST[window.Game.ACTIVE_SCENE_ID].destroy()
     }
 
-    window.ACTIVE_SCENE_ID = newSceneId
+    window.Game.ACTIVE_SCENE_ID = newSceneId
 
-    console.debug('transition::setup', SCENES_LIST[window.ACTIVE_SCENE_ID].name)
+    SCENES_LIST[window.Game.ACTIVE_SCENE_ID].setup()
 
-    SCENES_LIST[window.ACTIVE_SCENE_ID].setup()
+    return true
 }
+
+
+export function isArray(value) { return Array.isArray(value) }
+export function isBool(value) { return value === true || value === false }
+export function isNull(value) { return value === null }
+export function isNumber(value) { return (typeof value) === 'number'}
+export function isString(value) { return (typeof value) === 'string'}
+export function isUndefined(value) { return value === undefined }
+
+

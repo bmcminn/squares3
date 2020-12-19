@@ -22,152 +22,46 @@
 
 // import 'app.css'
 
-
 import p5 from 'p5'
 window.p5 = p5
 // import 'p5/lib/addons/p5.sound'
 // import { preload, setup, update, draw, windowResized } from './sketch'
-import Scene from './Scene.js'
-import Shape from './Shape.js'
-import { COLOR_BLACK, COLOR_RED, COLOR_WHITE } from './colors.js'
+
+import { COLOR_WHITE } from './colors.js'
 import { randomInt, transitionScene } from './helpers.js'
 
 
-window.ACTIVE_SCENE_ID = null
+window.offset   = 30
+window.height   = 600
+window.width    = 800
 
-
-const Game = {
-    name:   'squares 3',
-    byline: 'by Brandtley McMinn',
-    offset: 30,
-    state:  null,
+window.Game = {
+    name:    'squares 3',
+    byline:  'by Brandtley McMinn',
+    offset:  30,
+    state:   null,
     height:  600,
-    width:  800,
+    width:   800,
+
+    SCENE_HOME: 0,
+    SCENE_HELP: 1,
+    SCENE_GAME: 2,
+    SCENE_GAMEOVER: 3,
+
+    ACTIVE_SCENE_ID: null,
+
+    SOUND_LOFI_LOOP: null,
+    SOUND_MAIN_LOOP: null,
+
+    STATE_PLAYING_LOFI: true,
 }
 
 
+import SceneGameOverScreen from './SceneGameOverScreen.js'
+import SceneGameScreen from './SceneGameScreen.js'
+import SceneHelpScreen from './SceneHelpScreen.js'
+import SceneHomeScreen from './SceneHomeScreen.js'
 
-
-
-
-const SCENE_HOME      = 0
-const SCENE_HELP      = 1
-const SCENE_GAME      = 2
-const SCENE_GAMEOVER  = 3
-
-
-
-let SOUND_MAIN_LOOP
-let SOUND_LOFI_LOOP
-
-let STATE_PLAYING_LOFI = true
-
-
-class SceneHomeScreen extends Scene {
-
-    constructor(...args) {
-        super(...args)
-
-        this.shapes        = null
-        this.title         = null
-        this.subtitle      = null
-        this.helpButton    = null
-        this.playButton    = null
-    }
-
-    setup() {
-
-        this.shapes = this.shapes ?? new Array(20).fill({}).map(el => new Shape())
-
-        this.title = this.title ?? createElement('h1', Game.name)
-        this.title.show()
-        this.title.position(window.width / 2 - 200, window.height / 2 - 200)
-
-        this.subtitle = this.subtitle ?? createElement('p', Game.byline)
-        this.subtitle.show()
-        this.subtitle.position(this.title.x + 80, this.title.y + 80)
-
-        this.playButton = this.playButton ?? createButton('play')
-        this.playButton.show()
-        this.playButton.position(window.width / 2, window.height / 3 * 2)
-        this.playButton.mousePressed(transitionScene.bind(null, SCENE_GAME))
-
-        this.helpButton = this.helpButton ?? createButton('help')
-        this.helpButton.show()
-        this.helpButton.position(window.width / 2, this.playButton.y + this.playButton.height + 5)
-        this.helpButton.mousePressed(transitionScene.bind(null, SCENE_HELP))
-
-        toggleAudioTracks(true)
-    }
-
-    destroy() {
-        this.title.hide()
-        this.subtitle.hide()
-        this.playButton.hide()
-        this.helpButton.hide()
-    }
-
-    draw() {
-
-        for (var i = this.shapes.length - 1; i >= 0; i--) {
-            this.shapes[i].update()
-            this.shapes[i].draw()
-        }
-
-    }
-}
-
-
-class SceneHelpScreen extends Scene {
-
-    constructor(...args) {
-        super(...args)
-
-        this.backButton = null
-        this.directions = null
-    }
-
-    setup() {
-        this.directions = this.directions ?? window.select('#directions')
-        this.directions.show()
-        this.directions.position(window.width / 2, window.height / 2)
-
-        this.backButton = this.backButton ?? createButton('back')
-        this.backButton.show()
-        this.backButton.position(window.width / 2, window.height / 2)
-        this.backButton.mousePressed(transitionScene.bind(null, SCENE_HOME))
-    }
-
-
-    destroy() {
-        this.backButton.hide()
-        this.directions.hide()
-    }
-
-
-    draw() {
-
-
-    }
-}
-
-
-class SceneGameScreen extends Scene {
-
-    constructor(...args) {
-        super(...args)
-
-    }
-}
-
-
-class SceneGameOverScreen extends Scene {
-
-    constructor(...args) {
-        super(...args)
-
-    }
-}
 
 
 window.SCENES_LIST = [
@@ -178,29 +72,30 @@ window.SCENES_LIST = [
 ]
 
 
-
 // =============================================
 //  P5 Runtime Methods
 // =============================================
 
-
 window.preload = function() {
-    SOUND_MAIN_LOOP = loadSound('assets/audio/main-loop.mp3')
-    SOUND_LOFI_LOOP = loadSound('assets/audio/main-lofi.mp3')
+    window.Game.SOUND_MAIN_LOOP = loadSound('assets/audio/main-loop.mp3')
+    window.Game.SOUND_LOFI_LOOP = loadSound('assets/audio/main-lofi.mp3')
 }
 
 
 window.setup = function() {
 
-    window.app = createCanvas(Game.width, Game.height)
+    window.app = createCanvas(window.Game.width, window.Game.height)
 
     // setup audio
-    SOUND_MAIN_LOOP.setVolume(0, 0)
-    SOUND_LOFI_LOOP.setVolume(0, 0)
-    SOUND_MAIN_LOOP.loop() // song is ready to play during setup() because it was loaded during preload
-    SOUND_LOFI_LOOP.loop() // song is ready to play during setup() because it was loaded during preload
+    window.Game.SOUND_MAIN_LOOP.setVolume(0, 0)
+    window.Game.SOUND_LOFI_LOOP.setVolume(0, 0)
+    window.Game.SOUND_MAIN_LOOP.loop() // song is ready to play during setup() because it was loaded during preload
+    window.Game.SOUND_LOFI_LOOP.loop() // song is ready to play during setup() because it was loaded during preload
 
-    transitionScene(SCENE_HOME)
+
+    let event = { target: { dataset: { sceneId: window.Game.SCENE_HOME }}}
+
+    transitionScene(event)
 
     background(COLOR_WHITE)
 }
@@ -213,35 +108,35 @@ window.windowResized = function() {
 
 window.draw = function() {
 
-    window.SCENES_LIST[window.ACTIVE_SCENE_ID].draw()
+    window.SCENES_LIST[window.Game.ACTIVE_SCENE_ID].draw()
 
 }
 
 
-window.mousePressed = function() {
+window.mousePressed = function(event) {
 
-    window.SCENES_LIST[window.ACTIVE_SCENE_ID].mousePressed()
+    window.SCENES_LIST[window.Game.ACTIVE_SCENE_ID].mousePressed(event)
 
 }
 
 
 window.keyPressed = function() {
 
-    window.SCENES_LIST[window.ACTIVE_SCENE_ID].keyPressed()
+    window.SCENES_LIST[window.Game.ACTIVE_SCENE_ID].keyPressed()
 
 }
 
 
 window.toggleAudioTracks = function(bool) {
 
-    STATE_PLAYING_LOFI = !STATE_PLAYING_LOFI
+    window.Game.STATE_PLAYING_LOFI = !window.Game.STATE_PLAYING_LOFI
 
     if (bool === true || bool === false) {
-        STATE_PLAYING_LOFI = bool
+        window.Game.STATE_PLAYING_LOFI = bool
     }
 
     let crossfadeDuration = 0.2
 
-    SOUND_LOFI_LOOP.setVolume(Number(STATE_PLAYING_LOFI), crossfadeDuration)
-    SOUND_MAIN_LOOP.setVolume(Number(!STATE_PLAYING_LOFI), crossfadeDuration)
+    window.Game.SOUND_LOFI_LOOP.setVolume(Number(window.Game.STATE_PLAYING_LOFI), crossfadeDuration)
+    window.Game.SOUND_MAIN_LOOP.setVolume(Number(!window.Game.STATE_PLAYING_LOFI), crossfadeDuration)
 }

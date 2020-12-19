@@ -25,25 +25,6 @@
 
 	var p5 = unwrapExports(p5_min);
 
-	class Scene {
-	    constructor(name) {
-	        this.name = name;
-	        this.app = document.querySelector('#defaultCanvas0');
-	    }
-
-	    setup() {}
-
-	    destroy() {}
-
-	    draw() {}
-
-	    mousePressed() {}
-
-	    keyDown() {}
-
-	    keyPressed() {}
-	}
-
 	const COLOR_BLACK   = '#000000';
 	const COLOR_RED     = '#CD3131';
 	const COLOR_WHITE   = '#FFFFFF';
@@ -58,20 +39,67 @@
 
 
 
-	function transitionScene(newSceneId) {
+	function isOutsideBounds(x, y, xmin, ymin, xmax, ymax) {
+	    return x < xmin || xmax < x || y < ymin || ymax < y
+	}
 
-	    if (window.ACTIVE_SCENE_ID && window.ACTIVE_SCENE_ID === newSceneId) { return }
 
-	    if (SCENES_LIST[window.ACTIVE_SCENE_ID]) {
-	        console.debug('transition::destroy', SCENES_LIST[window.ACTIVE_SCENE_ID].name);
-	        SCENES_LIST[window.ACTIVE_SCENE_ID].destroy();
+
+	function transitionScene(event) {
+
+	    let newSceneId = event?.target?.dataset?.sceneId ?? -1;
+
+	    if (event?.buttons && event.buttons > 1) { return }
+
+	    if (newSceneId < 0) { return false }
+
+	    if (window.Game?.ACTIVE_SCENE_ID === newSceneId) { return }
+
+	    if (SCENES_LIST[window.Game.ACTIVE_SCENE_ID]) {
+	        SCENES_LIST[window.Game.ACTIVE_SCENE_ID].destroy();
 	    }
 
-	    window.ACTIVE_SCENE_ID = newSceneId;
+	    window.Game.ACTIVE_SCENE_ID = newSceneId;
 
-	    console.debug('transition::setup', SCENES_LIST[window.ACTIVE_SCENE_ID].name);
+	    SCENES_LIST[window.Game.ACTIVE_SCENE_ID].setup();
 
-	    SCENES_LIST[window.ACTIVE_SCENE_ID].setup();
+	    return true
+	}
+
+	class Scene {
+	    constructor(name) {
+	        this.name = name;
+	        this.app = document.querySelector('#defaultCanvas0');
+	    }
+
+	    setup() {}
+
+	    destroy() {}
+
+	    draw() {}
+
+	    mousePressed() {}
+
+	    mouseDrag() {}
+
+	    keyDown() {}
+
+	    keyPressed() {}
+	}
+
+	class SceneGameOverScreen extends Scene {
+
+	    constructor(...args) {
+	        super(...args);
+
+	    }
+
+
+	    mousePressed(event) {
+
+	        if (transitionScene(event)) { return }
+
+	    }
 	}
 
 	const DIR_X         = 'x';
@@ -80,15 +108,21 @@
 	const SHAPE_SQUARE  = 'square';
 
 
-	const SPAWN_MAX_X     = window.width + window.offset;
-	const SPAWN_MAX_Y     = window.height + window.offset;
-	const SPAWN_MIN_X     = 0 - window.offset;
-	const SPAWN_MIN_Y     = 0 - window.offset;
+	const offset = 30;
+	const width = 800;
+	const height = 600;
+
+
+	const SPAWN_MIN_X = 0 - offset;
+	const SPAWN_MIN_Y = 0 - offset;
+	const SPAWN_MAX_X = width + offset;
+	const SPAWN_MAX_Y = height + offset;
+
 
 
 	class Shape {
 
-	    constructor() {
+	    constructor(state) {
 
 	        this.dir     = '';
 	        this.vector  = 0;
@@ -97,7 +131,6 @@
 	        this.speed   = 1;
 	        this.scale   = 10;
 	        this.shape   = '';
-
 
 	        this.init();
 	    }
@@ -108,18 +141,18 @@
 	        this.dir    = (Math.random() > 0.5) ? DIR_X         : DIR_Y;
 	        this.shape  = (Math.random() < 0.2) ? SHAPE_CIRCLE  : SHAPE_SQUARE;
 	        this.color  = (Math.random() < 0.4) ? COLOR_RED     : COLOR_BLACK;
-	        this.speed  = round(Math.random() * 2, 3);
+	        this.speed  = round(Math.random(), 3);
 	        this.scale  *= randomInt(5);
 
 	        this.vector = (Math.random() > 0.5) ? -1 : 1;
 
 	        if (this.dir === DIR_X) {
-	            this.x = this.vector < 0 ? SPAWN_MIN_X : SPAWN_MAX_X;
+	            this.x = this.vector > 0 ? SPAWN_MIN_X : SPAWN_MAX_X;
 	            this.y = randomInt(window.height);
 
 	        } else {
 	            this.x = randomInt(window.width);
-	            this.y = this.vector < 0 ? SPAWN_MIN_Y : SPAWN_MAX_Y;
+	            this.y = this.vector > 0 ? SPAWN_MIN_Y : SPAWN_MAX_Y;
 	        }
 
 	    }
@@ -127,93 +160,204 @@
 
 	    draw() {
 
+	        this.update();
+
+	        push();
 	        noStroke();
+
+	        translate(this.x, this.y);
+
 	        fill(this.color);
 
 	        if (this.shape === SHAPE_SQUARE) {
-	            square(this.x, this.y, this.scale);
+	            square(0, 0, this.scale);
 	        } else {
-	            circle(this.x, this.y, this.scale);
+	            circle(0, 0, this.scale);
 	        }
+	        pop();
 
 	    }
 
 
 	    update() {
 
-	        if (this.dir === DIR_X) { this.x += window.deltaTime * this.speed * this.dir; }
-	        else { this.y += deltaTime * this.speed * this.dir; }
+	        let deltaT = Math.floor(window.deltaTime);
 
-	        return this
+	        let move = deltaT * this.speed * this.vector;
 
+	        if (this.dir === DIR_X) {
+	            this.x += move;
+	        } else {
+	            this.y += move;
+	        }
 	    }
 	}
 
-	window.p5 = p5;
-
-
-	window.ACTIVE_SCENE_ID = null;
-
-
-	const Game = {
-	    name:   'squares 3',
-	    byline: 'by Brandtley McMinn',
-	    offset: 30,
-	    state:  null,
-	    height:  600,
-	    width:  800,
-	};
-
-
-
-
-
-
-	const SCENE_HOME      = 0;
-	const SCENE_HELP      = 1;
-	const SCENE_GAME      = 2;
-
-
-
-	let SOUND_MAIN_LOOP;
-	let SOUND_LOFI_LOOP;
-
-	let STATE_PLAYING_LOFI = true;
-
-
-	class SceneHomeScreen extends Scene {
+	class SceneGameScreen extends Scene {
 
 	    constructor(...args) {
 	        super(...args);
 
-	        this.shapes        = null;
-	        this.title         = null;
-	        this.subtitle      = null;
-	        this.helpButton    = null;
-	        this.playButton    = null;
 	    }
 
 	    setup() {
 
 	        this.shapes = this.shapes ?? new Array(20).fill({}).map(el => new Shape());
 
-	        this.title = this.title ?? createElement('h1', Game.name);
-	        this.title.show();
-	        this.title.position(window.width / 2 - 200, window.height / 2 - 200);
+	        toggleAudioTracks();
+	    }
 
-	        this.subtitle = this.subtitle ?? createElement('p', Game.byline);
+
+	    draw() {
+
+	        clear();
+
+	        for (var i = this.shapes.length - 1; i >= 0; i--) {
+	            this.shapes[i].draw();
+	        }
+	    }
+
+
+
+	    mousePressed(event) {
+
+	        if (transitionScene(event)) { return }
+
+
+	        console.debug('scene home screen @ mousePressed', event);
+
+	    }
+
+	}
+
+	class SceneHelpScreen extends Scene {
+
+	    constructor(...args) {
+	        super(...args);
+
+	        this.playerRotate = 0;
+
+	        this.backButton = null;
+	        this.directions = null;
+	        this.title      = null;
+	        this.player     = null;
+	    }
+
+	    setup() {
+
+	        this.title = this.title ?? createElement('h2', 'help');
+	        this.title.show();
+	        this.title.position(20, 0);
+	        this.title.addClass('page-title');
+
+	        this.directions = this.directions ?? window.select('#directions');
+	        this.directions.show();
+	        this.directions.position(window.width / 2, window.height / 2);
+
+	        this.backButton = this.backButton ?? createButton('back');
+	        this.backButton.show();
+	        this.backButton.position(window.width / 2, window.height / 2);
+	        this.backButton.addClass('scene-button');
+	        this.backButton.elt.dataset.sceneId = window.Game.SCENE_HOME;
+
+	        // this.backButton.mousePressed(transitionScene.bind(null, window.Game.SCENE_HOME))
+	    }
+
+
+	    destroy() {
+	        this.backButton.hide();
+	        this.directions.hide();
+	        this.title.hide();
+	        // this.player.hide()
+	    }
+
+
+
+	    draw() {
+	        clear();
+
+	        this.drawPlayer();
+	        this.drawPowerDown();
+	    }
+
+
+	    drawPlayer() {
+	        push();
+	        this.playerRotate += (window.deltaTime * 0.00165); //  + window.deltaTime / 2
+	        translate(30, 300);
+	        rotate(this.playerRotate);
+	        fill(0,0,0);
+	        rectMode(window.CENTER);
+	        square(0, 0, 30);
+	        pop();
+	    }
+
+	    drawPowerDown() {
+	        push();
+	        translate(30, 350);
+	        this.playerRotate += (window.deltaTime * 0.00165); //  + window.deltaTime / 2
+	        rotate(this.playerRotate);
+	        fill(0,0,0);
+	        rectMode(window.CENTER);
+	        square(0, 0, 30);
+	        pop();
+	    }
+
+	    mousePressed(event) {
+
+	        if (transitionScene(event)) { return }
+
+
+	        console.debug('scene home screen @ mousePressed', event);
+
+	    }
+	}
+
+	class SceneHomeScreen extends Scene {
+
+	    constructor(...args) {
+	        super(...args);
+
+	        this.shapes     = null;
+	        this.title      = null;
+	        this.subtitle   = null;
+	        this.helpButton = null;
+	        this.playButton = null;
+	        this.interval   = null;
+	    }
+
+	    setup(state) {
+
+	        this.shapes = this.shapes ?? new Array(20).fill({}).map(el => new Shape());
+
+	        this.initInterval();
+
+
+	        this.title = this.title ?? createElement('h1', window.Game.name);
+	        this.title.show();
+	        this.title.addClass('page-title');
+	        this.title.position(20, 0);
+
+
+	        this.subtitle = this.subtitle ?? createElement('p', window.Game.byline);
 	        this.subtitle.show();
-	        this.subtitle.position(this.title.x + 80, this.title.y + 80);
+	        this.subtitle.position(this.title.x + 125, this.title.y + 130);
+
 
 	        this.playButton = this.playButton ?? createButton('play');
 	        this.playButton.show();
-	        this.playButton.position(window.width / 2, window.height / 3 * 2);
-	        this.playButton.mousePressed(transitionScene.bind(null, SCENE_GAME));
+	        this.playButton.addClass('scene-button');
+	        this.playButton.position(window.Game.width / 2, window.Game.height / 5 * 3);
+	        // this.playButton.mousePressed(transitionScene.bind(null, window.Game.SCENE_GAME))
+	        this.playButton.elt.dataset.sceneId = window.Game.SCENE_GAME;
+
 
 	        this.helpButton = this.helpButton ?? createButton('help');
 	        this.helpButton.show();
-	        this.helpButton.position(window.width / 2, this.playButton.y + this.playButton.height + 5);
-	        this.helpButton.mousePressed(transitionScene.bind(null, SCENE_HELP));
+	        this.helpButton.addClass('scene-button');
+	        this.helpButton.position(window.Game.width / 2, this.playButton.y + this.playButton.height + 60);
+	        this.helpButton.elt.dataset.sceneId = window.Game.SCENE_HELP;
+	        // this.helpButton.mousePressed(transitionScene.bind(null, window.Game.SCENE_HELP))
 
 	        toggleAudioTracks(true);
 	    }
@@ -223,69 +367,83 @@
 	        this.subtitle.hide();
 	        this.playButton.hide();
 	        this.helpButton.hide();
+
+	        window.clearInterval(this.interval);
 	    }
+
+
+	    initInterval(duration=250) {
+	        if (this.interval) {
+	            window.clearInterval(this.interval);
+	        }
+
+	        this.interval = window.setInterval(this.addShape.bind(this), duration);
+	    }
+
+
+	    addShape() {
+
+	        let buffer = 50;
+
+	        this.shapes = this.shapes.filter(el => {
+	            return !isOutsideBounds(el.x, el.y, -buffer, -buffer, 800+buffer, 600+buffer)
+	        });
+
+	        this.shapes.push(new Shape());
+	    }
+
 
 	    draw() {
 
+	        clear();
+
 	        for (var i = this.shapes.length - 1; i >= 0; i--) {
-	            this.shapes[i].update();
 	            this.shapes[i].draw();
 	        }
 
-	    }
-	}
-
-
-	class SceneHelpScreen extends Scene {
-
-	    constructor(...args) {
-	        super(...args);
-
-	        this.backButton = null;
-	        this.directions = null;
-	    }
-
-	    setup() {
-	        this.directions = window.select('#directions');
-	        this.directions.show();
-	        this.directions.position(window.width / 2, window.height / 2);
-
-	        this.backButton = this.backButton ?? createButton('back');
-	        this.backButton.show();
-	        this.backButton.position(window.width / 2, window.height / 2);
-	        this.backButton.mousePressed(transitionScene.bind(null, SCENE_HOME));
+	        fill('rgba(255,255,255,0.5)');
+	        rect(0,0, 800, 600);
 	    }
 
 
-	    destroy() {
-	        this.backButton.hide();
-	        this.directions.hide();
-	    }
+	    mousePressed(event) {
+
+	        if (transitionScene(event)) { return }
 
 
-	    draw() {
-
+	        console.debug('scene home screen @ mousePressed', event);
 
 	    }
 	}
 
-
-	class SceneGameScreen extends Scene {
-
-	    constructor(...args) {
-	        super(...args);
-
-	    }
-	}
+	window.p5 = p5;
 
 
-	class SceneGameOverScreen extends Scene {
+	window.offset   = 30;
+	window.height   = 600;
+	window.width    = 800;
 
-	    constructor(...args) {
-	        super(...args);
+	window.Game = {
+	    name:    'squares 3',
+	    byline:  'by Brandtley McMinn',
+	    offset:  30,
+	    state:   null,
+	    height:  600,
+	    width:   800,
 
-	    }
-	}
+	    SCENE_HOME: 0,
+	    SCENE_HELP: 1,
+	    SCENE_GAME: 2,
+	    SCENE_GAMEOVER: 3,
+
+	    ACTIVE_SCENE_ID: null,
+
+	    SOUND_LOFI_LOOP: null,
+	    SOUND_MAIN_LOOP: null,
+
+	    STATE_PLAYING_LOFI: true,
+	};
+
 
 
 	window.SCENES_LIST = [
@@ -296,29 +454,30 @@
 	];
 
 
-
 	// =============================================
 	//  P5 Runtime Methods
 	// =============================================
 
-
 	window.preload = function() {
-	    SOUND_MAIN_LOOP = loadSound('assets/audio/main-loop.mp3');
-	    SOUND_LOFI_LOOP = loadSound('assets/audio/main-lofi.mp3');
+	    window.Game.SOUND_MAIN_LOOP = loadSound('assets/audio/main-loop.mp3');
+	    window.Game.SOUND_LOFI_LOOP = loadSound('assets/audio/main-lofi.mp3');
 	};
 
 
 	window.setup = function() {
 
-	    window.app = createCanvas(Game.width, Game.height);
+	    window.app = createCanvas(window.Game.width, window.Game.height);
 
 	    // setup audio
-	    SOUND_MAIN_LOOP.setVolume(0, 0);
-	    SOUND_LOFI_LOOP.setVolume(0, 0);
-	    SOUND_MAIN_LOOP.loop(); // song is ready to play during setup() because it was loaded during preload
-	    SOUND_LOFI_LOOP.loop(); // song is ready to play during setup() because it was loaded during preload
+	    window.Game.SOUND_MAIN_LOOP.setVolume(0, 0);
+	    window.Game.SOUND_LOFI_LOOP.setVolume(0, 0);
+	    window.Game.SOUND_MAIN_LOOP.loop(); // song is ready to play during setup() because it was loaded during preload
+	    window.Game.SOUND_LOFI_LOOP.loop(); // song is ready to play during setup() because it was loaded during preload
 
-	    transitionScene(SCENE_HOME);
+
+	    let event = { target: { dataset: { sceneId: window.Game.SCENE_HOME }}};
+
+	    transitionScene(event);
 
 	    background(COLOR_WHITE);
 	};
@@ -331,37 +490,37 @@
 
 	window.draw = function() {
 
-	    window.SCENES_LIST[window.ACTIVE_SCENE_ID].draw();
+	    window.SCENES_LIST[window.Game.ACTIVE_SCENE_ID].draw();
 
 	};
 
 
-	window.mousePressed = function() {
+	window.mousePressed = function(event) {
 
-	    window.SCENES_LIST[window.ACTIVE_SCENE_ID].mousePressed();
+	    window.SCENES_LIST[window.Game.ACTIVE_SCENE_ID].mousePressed(event);
 
 	};
 
 
 	window.keyPressed = function() {
 
-	    window.SCENES_LIST[window.ACTIVE_SCENE_ID].keyPressed();
+	    window.SCENES_LIST[window.Game.ACTIVE_SCENE_ID].keyPressed();
 
 	};
 
 
 	window.toggleAudioTracks = function(bool) {
 
-	    STATE_PLAYING_LOFI = !STATE_PLAYING_LOFI;
+	    window.Game.STATE_PLAYING_LOFI = !window.Game.STATE_PLAYING_LOFI;
 
 	    if (bool === true || bool === false) {
-	        STATE_PLAYING_LOFI = bool;
+	        window.Game.STATE_PLAYING_LOFI = bool;
 	    }
 
 	    let crossfadeDuration = 0.2;
 
-	    SOUND_LOFI_LOOP.setVolume(Number(STATE_PLAYING_LOFI), crossfadeDuration);
-	    SOUND_MAIN_LOOP.setVolume(Number(!STATE_PLAYING_LOFI), crossfadeDuration);
+	    window.Game.SOUND_LOFI_LOOP.setVolume(Number(window.Game.STATE_PLAYING_LOFI), crossfadeDuration);
+	    window.Game.SOUND_MAIN_LOOP.setVolume(Number(!window.Game.STATE_PLAYING_LOFI), crossfadeDuration);
 	};
 
 }());

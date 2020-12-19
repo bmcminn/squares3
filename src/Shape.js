@@ -1,6 +1,6 @@
 
 import { COLOR_BLACK, COLOR_RED, COLOR_WHITE } from './colors.js'
-import { randomInt } from './helpers.js'
+import { randomInt, isOutsideBounds } from './helpers.js'
 
 const DIR_X         = 'x'
 const DIR_Y         = 'y'
@@ -8,15 +8,21 @@ const SHAPE_CIRCLE  = 'circle'
 const SHAPE_SQUARE  = 'square'
 
 
-const SPAWN_MAX_X     = window.width + window.offset
-const SPAWN_MAX_Y     = window.height + window.offset
-const SPAWN_MIN_X     = 0 - window.offset
-const SPAWN_MIN_Y     = 0 - window.offset
+const offset = 30
+const width = 800
+const height = 600
+
+
+const SPAWN_MIN_X = 0 - offset
+const SPAWN_MIN_Y = 0 - offset
+const SPAWN_MAX_X = width + offset
+const SPAWN_MAX_Y = height + offset
+
 
 
 class Shape {
 
-    constructor() {
+    constructor(state) {
 
         this.dir     = ''
         this.vector  = 0
@@ -25,7 +31,6 @@ class Shape {
         this.speed   = 1
         this.scale   = 10
         this.shape   = ''
-
 
         this.init()
     }
@@ -36,18 +41,18 @@ class Shape {
         this.dir    = (Math.random() > 0.5) ? DIR_X         : DIR_Y
         this.shape  = (Math.random() < 0.2) ? SHAPE_CIRCLE  : SHAPE_SQUARE
         this.color  = (Math.random() < 0.4) ? COLOR_RED     : COLOR_BLACK
-        this.speed  = round(Math.random() * 2, 3)
+        this.speed  = round(Math.random(), 3)
         this.scale  *= randomInt(5)
 
         this.vector = (Math.random() > 0.5) ? -1 : 1
 
         if (this.dir === DIR_X) {
-            this.x = this.vector < 0 ? SPAWN_MIN_X : SPAWN_MAX_X
+            this.x = this.vector > 0 ? SPAWN_MIN_X : SPAWN_MAX_X
             this.y = randomInt(window.height)
 
         } else {
             this.x = randomInt(window.width)
-            this.y = this.vector < 0 ? SPAWN_MIN_Y : SPAWN_MAX_Y
+            this.y = this.vector > 0 ? SPAWN_MIN_Y : SPAWN_MAX_Y
         }
 
     }
@@ -55,25 +60,36 @@ class Shape {
 
     draw() {
 
+        this.update()
+
+        push()
         noStroke()
+
+        translate(this.x, this.y)
+
         fill(this.color)
 
         if (this.shape === SHAPE_SQUARE) {
-            square(this.x, this.y, this.scale)
+            square(0, 0, this.scale)
         } else {
-            circle(this.x, this.y, this.scale)
+            circle(0, 0, this.scale)
         }
+        pop()
 
     }
 
 
     update() {
 
-        if (this.dir === DIR_X) { this.x += window.deltaTime * this.speed * this.dir }
-        else { this.y += deltaTime * this.speed * this.dir }
+        let deltaT = Math.floor(window.deltaTime)
 
-        return this
+        let move = deltaT * this.speed * this.vector
 
+        if (this.dir === DIR_X) {
+            this.x += move
+        } else {
+            this.y += move
+        }
     }
 }
 
